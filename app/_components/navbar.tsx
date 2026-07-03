@@ -61,7 +61,7 @@ export default function Navbar({ showCta = false }: NavbarProps) {
               Company
             </a>
             <a
-              href="#contact"
+              href="/contact"
               className="font-sans text-base font-medium text-zinc-600 hover:text-black transition-colors duration-200"
             >
               Contact
@@ -97,7 +97,7 @@ export default function Navbar({ showCta = false }: NavbarProps) {
                 Company
               </a>
               <a
-                href="#contact"
+                href="/contact"
                 className="block rounded-lg px-3 py-2 text-base font-medium text-zinc-700 hover:bg-zinc-50 hover:text-black transition-colors"
                 onClick={() => setIsOpen(false)}
               >
