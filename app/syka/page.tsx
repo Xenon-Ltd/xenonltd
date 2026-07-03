@@ -1,0 +1,25 @@
+import Navbar from "@/app/_components/navbar";
+import FooterSection from "@/app/_components/footer/footer-section";
+import SykaHeroSection from "./_components/syka-hero-section";
+import WhatSykaDoesSection from "./_components/what-syka-does-section";
+import StatsBarSection from "./_components/stats-bar-section";
+import PartnersSection from "./_components/partners-section";
+import GrowthStorySection from "./_components/growth-story-section";
+import FinalCtaSection from "./_components/final-cta-section";
+
+export default function SykaPage() {
+  return (
+    <div className="min-h-screen bg-background flex flex-col">
+      <Navbar />
+      <main className="flex-1">
+        <SykaHeroSection />
+        <WhatSykaDoesSection />
+        <StatsBarSection />
+        <PartnersSection />
+        <GrowthStorySection />
+        <FinalCtaSection />
+      </main>
+      <FooterSection />
+    </div>
+  );
+}
