@@ -3,6 +3,35 @@
 :root {
   --background: #F9F4F1;
   --foreground: #171717;
+
+  /* Figma color tokens */
+  --shade-white: #FFFFFF;
+  --shade-black: #000000;
+
+  --grey-75: #F7F9FC;
+  --grey-100: #F2F4F7;
+  --grey-200: #E4E7EC;
+  --grey-300: #D0D5DD;
+  --grey-400: #98A2B3;
+  --grey-500: #667185;
+  --grey-600: #475367;
+  --grey-700: #344054;
+  --grey-800: #1D2739;
+  --grey-900: #101928;
+
+  --primary-400: #F56630;
+  --primary-300: #F77A4A;
+
+  --success-400: #0F973D;
+
+  --teal-500: #00A099;
+  --blue-600: #137AC7;
+
+  --office-brown-700: #645D5D;
+  --office-brown-800: #514A4A;
+
+  --card-surface: rgba(204, 221, 238, 0.25);
+  --card-surface-solid: #FAFAFA;
 }
 
 @theme inline {
@@ -10,6 +39,34 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-paragraph);
   --font-heading: var(--font-heading);
+
+  --color-shade-white: var(--shade-white);
+  --color-shade-black: var(--shade-black);
+
+  --color-grey-75: var(--grey-75);
+  --color-grey-100: var(--grey-100);
+  --color-grey-200: var(--grey-200);
+  --color-grey-300: var(--grey-300);
+  --color-grey-400: var(--grey-400);
+  --color-grey-500: var(--grey-500);
+  --color-grey-600: var(--grey-600);
+  --color-grey-700: var(--grey-700);
+  --color-grey-800: var(--grey-800);
+  --color-grey-900: var(--grey-900);
+
+  --color-primary-400: var(--primary-400);
+  --color-primary-300: var(--primary-300);
+
+  --color-success-400: var(--success-400);
+
+  --color-teal-500: var(--teal-500);
+  --color-blue-600: var(--blue-600);
+
+  --color-office-brown-700: var(--office-brown-700);
+  --color-office-brown-800: var(--office-brown-800);
+
+  --color-card-surface: var(--card-surface);
+  --color-card-surface-solid: var(--card-surface-solid);
 }
 
 body {

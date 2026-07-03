@@ -9,7 +9,7 @@ const syne = Syne({
 
 const ibmPlexSans = IBM_Plex_Sans({
   variable: "--font-paragraph",
-  weight: "400",
+  weight: ["300", "400", "500"],
   subsets: ["latin"],
 });
 

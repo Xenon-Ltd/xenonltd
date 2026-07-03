@@ -1,5 +1,4 @@
-import React from "react";
-import WhySection, { TestimonialData } from "./_components/why-section";
+import WhySection, { TestimonialData } from "@/shared/ui/why-section";
 
 const testimonialsSet1: TestimonialData[] = [
   {
@@ -50,7 +49,6 @@ const testimonialsSet2: TestimonialData[] = [
 export default function WhyPage() {
   return (
     <div className="bg-[#FAFAFA] min-h-screen flex flex-col space-y-16 py-16">
-      {/* 1. First Section (Staggered Right-First) */}
       <WhySection
         tag="Trust & Credibility"
         title="Why Financial Institutions Choose Xenon."
@@ -59,7 +57,6 @@ export default function WhyPage() {
         staggerDirection="right-first"
       />
 
-      {/* 2. Second Section (Staggered Left-First) */}
       <WhySection
         tag="Trust & Credibility"
         title="Why Financial Institutions Choose Xenon."

@@ -1,56 +1,68 @@
-import React from "react";
 import CollageDiamond from "./collage-diamond";
+
+const diamonds = [
+  {
+    src: "/images/hero-diamond-2.png",
+    alt: "Team collaboration",
+    position: "top-[6%] left-[0%] w-[30%]",
+    gradient: "linear-gradient(138deg, #FAFAFA 52%, #CCDDEE 100%)",
+  },
+  {
+    src: "/images/hero-diamond-5.png",
+    alt: "Financial technology",
+    position: "top-[0%] left-[32%] w-[30%] z-10",
+    gradient: "linear-gradient(138deg, #FAFAFA 52%, #E63B33 100%)",
+  },
+  {
+    src: "/images/hero-diamond-1.png",
+    alt: "Modern banking",
+    position: "top-[18%] left-[16%] w-[30%]",
+    gradient: "linear-gradient(138deg, #FAFAFA 52%, #137AC7 100%)",
+  },
+  {
+    src: "/images/hero-diamond-4.png",
+    alt: "Payment solutions",
+    position: "top-[12%] left-[52%] w-[30%] z-20",
+    gradient: "linear-gradient(138deg, #FAFAFA 52%, #E84D1C 100%)",
+  },
+  {
+    src: "/images/hero-diamond-3.png",
+    alt: "Cross-border payments",
+    position: "top-[30%] left-[36%] w-[30%] z-10",
+    gradient: "linear-gradient(138deg, #FAFAFA 52%, #F39101 100%)",
+  },
+  {
+    src: "/images/hero-diamond-7.png",
+    alt: "African fintech",
+    position: "top-[44%] left-[4%] w-[30%]",
+    gradient: "linear-gradient(138deg, #FAFAFA 52%, #00A099 100%)",
+  },
+  {
+    src: "/images/hero-diamond-8.png",
+    alt: "Compliance infrastructure",
+    position: "top-[48%] left-[24%] w-[30%] z-10",
+    gradient: "linear-gradient(138deg, #FAFAFA 52%, #2EB466 100%)",
+  },
+  {
+    src: "/images/hero-diamond-6.png",
+    alt: "Transaction security",
+    position: "top-[42%] left-[56%] w-[30%]",
+    gradient: "linear-gradient(138deg, #FAFAFA 52%, #F8B032 100%)",
+  },
+];
 
 export default function HeroCollage() {
   return (
-    <div className="relative w-full aspect-[1.05] select-none">
-      {/* Diamond 1: Top-Left — Teal */}
-      <CollageDiamond
-        src="/hero-meeting.png"
-        alt="Team collaboration in a modern office"
-        className="top-[12%] left-[2%] w-[30%] aspect-square"
-        color="#14b8a6"
-      />
-
-      {/* Diamond 2: Top-Right — Orange/Coral */}
-      <CollageDiamond
-        src="/hero-man-orange.png"
-        alt="African developer using smartphone at night"
-        className="top-[0%] left-[50%] w-[30%] aspect-square"
-        color="#f97316"
-      />
-
-      {/* Diamond 3: Center — Purple/Magenta */}
-      <CollageDiamond
-        src="/hero-handshake.png"
-        alt="Corporate handshake representing trust and partnership"
-        className="top-[26%] left-[26%] w-[30%] aspect-square z-10"
-        color="#d946ef"
-      />
-
-      {/* Diamond 4: Center-Right — Royal Blue/Cyan */}
-      <CollageDiamond
-        src="/hero-office-smile.png"
-        alt="Smiling financial systems developer in bright office"
-        className="top-[18%] left-[70%] w-[30%] aspect-square"
-        color="#0ea5e9"
-      />
-
-      {/* Diamond 5: Bottom-Left — Mint/Emerald */}
-      <CollageDiamond
-        src="/hero-presentation.png"
-        alt="Business analytics dashboard presentation in boardroom"
-        className="top-[50%] left-[2%] w-[30%] aspect-square"
-        color="#10b981"
-      />
-
-      {/* Diamond 6: Bottom-Right — Deep Violet */}
-      <CollageDiamond
-        src="/hero-team-discussion.png"
-        alt="Financial team planning and strategy meeting"
-        className="top-[44%] left-[50%] w-[30%] aspect-square"
-        color="#8b5cf6"
-      />
+    <div className="relative w-full aspect-[1.06] select-none overflow-hidden">
+      {diamonds.map((diamond, index) => (
+        <CollageDiamond
+          key={index}
+          src={diamond.src}
+          alt={diamond.alt}
+          className={diamond.position}
+          gradient={diamond.gradient}
+        />
+      ))}
     </div>
   );
 }
