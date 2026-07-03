@@ -14,9 +14,9 @@ export default function FinalCtaSection({
   ctaText = "Schedule Consultation",
 }: FinalCtaSectionProps) {
   return (
-    <section id="cta" className="relative w-full overflow-hidden min-h-[500px] flex items-center bg-[#F9F4F1] border-t border-grey-100/10">
+    <section id="cta" className="relative w-full overflow-hidden min-h-[600px] pt-20 md:pt-32 pb-20 flex items-center bg-[#F9F4F1] border-t border-grey-100/10">
       {/* Background Image & Overlays */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute top-20 md:top-32 bottom-0 left-0 right-0 z-0">
         <Image
           src="/images/final-cta-bg.png"
           alt=""
@@ -27,14 +27,15 @@ export default function FinalCtaSection({
           aria-hidden="true"
         />
         
-        {/* Figma Gradient Overlay 1: Top-to-bottom blending to match page background #F9F4F1 */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F9F4F1] via-[#F9F4F1]/30 to-[#F9F4F1]" />
+        {/* Figma Gradient Overlay 1: Top-to-bottom edge blending to match page background #F9F4F1 */}
+        <div className="absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-[#F9F4F1] to-transparent z-10" />
+        <div className="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-[#F9F4F1] to-transparent z-10" />
 
         {/* Figma Gradient Overlay 2: Ambient blue color-blend overlay to blend text */}
-        <div className="absolute inset-0 bg-blue-600/15 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-blue-600/15 mix-blend-multiply z-0" />
       </div>
 
-      <Container className="relative z-10 py-20 flex justify-center text-center">
+      <Container className="relative z-20 py-20 flex justify-center text-center">
         <div className="flex flex-col items-center gap-8 max-w-[750px]">
           <div className="flex flex-col items-center gap-6">
             {/* Title */}

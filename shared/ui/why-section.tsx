@@ -35,7 +35,7 @@ export default function WhySection({
   );
 
   return (
-    <section id="why" className="w-full bg-[#FAFAFA] py-8 md:py-12">
+    <section id="why" className="w-full bg-transparent py-8 md:py-12">
       <Container className="grid grid-cols-1 xl:grid-cols-2 gap-12 xl:gap-16 items-start">
 
         {/* LEFT COLUMN: Trust, Heading, and CTAs */}

@@ -5,7 +5,7 @@ import WhatSykaDoesSection from "./_components/what-syka-does-section";
 import StatsBarSection from "./_components/stats-bar-section";
 import PartnersSection from "./_components/partners-section";
 import GrowthStorySection from "./_components/growth-story-section";
-import FinalCtaSection from "./_components/final-cta-section";
+import FinalCtaSection from "@/app/_components/final-cta/final-cta-section";
 
 export default function SykaPage() {
   return (
@@ -17,7 +17,11 @@ export default function SykaPage() {
         <StatsBarSection />
         <PartnersSection />
         <GrowthStorySection />
-        <FinalCtaSection />
+        <FinalCtaSection
+          title="Join the institutions already building on Syka."
+          description="Whether you want to white-label Syka's payment service, build your own corridor on Xenon's infrastructure, or simply learn what's possible, let's talk."
+          ctaText="Schedule Consultation"
+        />
       </main>
       <FooterSection />
     </div>
