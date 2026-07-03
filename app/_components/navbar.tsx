@@ -55,7 +55,7 @@ export default function Navbar({ showCta = false }: NavbarProps) {
               Solutions
             </a>
             <a
-              href="#company"
+              href="/about"
               className="font-sans text-base font-medium text-zinc-600 hover:text-black transition-colors duration-200"
             >
               Company
@@ -90,7 +90,7 @@ export default function Navbar({ showCta = false }: NavbarProps) {
                 Solutions
               </a>
               <a
-                href="#company"
+                href="/about"
                 className="block rounded-lg px-3 py-2 text-base font-medium text-zinc-700 hover:bg-zinc-50 hover:text-black transition-colors"
                 onClick={() => setIsOpen(false)}
               >
