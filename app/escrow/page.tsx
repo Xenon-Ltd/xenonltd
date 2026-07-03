@@ -2,7 +2,7 @@ import React from "react";
 import EscrowHero from "./_components/escrow-hero";
 import EscrowSecurity from "./_components/escrow-security";
 import EscrowHowItWorks from "./_components/escrow-how-it-works";
-import FinalCtaSection from "../_components/final-cta/final-cta-section";
+import FinalCtaSection from "@/shared/ui/final-cta-section";
 import FooterSection from "../_components/footer/footer-section";
 
 export default function EscrowPage() {

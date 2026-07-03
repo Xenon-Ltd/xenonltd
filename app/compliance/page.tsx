@@ -2,7 +2,7 @@ import React from "react";
 import ComplianceHero from "./_components/compliance-hero";
 import ComplianceRegulations from "./_components/compliance-regulations";
 import ComplianceCapabilities from "./_components/compliance-capabilities";
-import FinalCtaSection from "../_components/final-cta/final-cta-section";
+import FinalCtaSection from "@/shared/ui/final-cta-section";
 import FooterSection from "../_components/footer/footer-section";
 
 export default function CompliancePage() {

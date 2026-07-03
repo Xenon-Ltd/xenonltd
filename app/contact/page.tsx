@@ -3,6 +3,7 @@ import Navbar from "@/app/_components/navbar";
 import ContactForm from "./_components/contact-form";
 import FooterSection from "../_components/footer/footer-section";
 import Container from "@/shared/ui/container";
+import FinalCtaSection from "@/shared/ui/final-cta-section";
 
 export default function ContactPage() {
   return (
@@ -31,6 +32,9 @@ export default function ContactPage() {
           </div>
         </Container>
       </main>
+
+      {/* Empty Background Sky Banner */}
+      <FinalCtaSection empty={true} />
 
       {/* Footer */}
       <FooterSection />

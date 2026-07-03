@@ -5,7 +5,7 @@ import WhatSykaDoesSection from "./_components/what-syka-does-section";
 import StatsBarSection from "./_components/stats-bar-section";
 import PartnersSection from "./_components/partners-section";
 import GrowthStorySection from "./_components/growth-story-section";
-import FinalCtaSection from "@/app/_components/final-cta/final-cta-section";
+import FinalCtaSection from "@/shared/ui/final-cta-section";
 
 export default function SykaPage() {
   return (

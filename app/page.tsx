@@ -6,7 +6,7 @@ import AdvantageSection from "./_components/advantage/advantage-section";
 import HowItWorksSection from "./_components/how-it-works/how-it-works-section";
 import OurVisionSection from "./_components/our-vision/our-vision-section";
 import WhyXenonSection from "./_components/why-xenon/why-xenon-section";
-import FinalCtaSection from "./_components/final-cta/final-cta-section";
+import FinalCtaSection from "@/shared/ui/final-cta-section";
 import FooterSection from "./_components/footer/footer-section";
 
 export default function Home() {
