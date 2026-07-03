@@ -11,8 +11,9 @@ export default function PrimaryButton({
   className = "",
   ...props
 }: PrimaryButtonProps) {
-  const baseStyles =
-    "group relative inline-flex items-center justify-center gap-2 rounded-full px-6 py-4 font-sans text-base font-medium transition-all duration-200 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2";
+  const baseStyles = `group ${
+    className.includes("absolute") || className.includes("fixed") ? "" : "relative"
+  } inline-flex items-center justify-center gap-2 rounded-full px-6 py-4 font-sans text-base font-medium transition-all duration-200 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2`;
 
   const variantStyles =
     variant === "solid"

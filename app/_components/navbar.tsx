@@ -2,8 +2,13 @@
 
 import React, { useState } from "react";
 import Logo from "./logo";
+import PrimaryButton from "@/shared/ui/primary-button";
 
-export default function Navbar() {
+interface NavbarProps {
+  showCta?: boolean;
+}
+
+export default function Navbar({ showCta = false }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -65,7 +70,11 @@ export default function Navbar() {
 
           {/* Desktop Right Spacer (keeps links centered in visual alignment) */}
           <div className="hidden md:flex md:flex-1 md:justify-end">
-            {/* Can add CTA button here if needed in future */}
+            {showCta && (
+              <PrimaryButton className="text-sm py-2 px-5">
+                Schedule Consultation
+              </PrimaryButton>
+            )}
           </div>
         </div>
 

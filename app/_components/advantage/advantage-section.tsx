@@ -19,7 +19,7 @@ export default function AdvantageSection() {
             {/* Column 1 */}
             <div className="flex flex-col gap-6">
               {/* Proven Infrastructure */}
-              <div className="rounded-2xl bg-card-surface p-6 h-[195px] flex flex-col justify-between relative overflow-hidden">
+              <div className="rounded-2xl bg-card-surface pt-6 px-6 pb-2 h-[195px] flex flex-col justify-between relative overflow-hidden">
                 <div className="space-y-1">
                   <h3 className="font-heading text-base font-bold text-grey-800 tracking-[0.015em]">
                     Proven Infrastructure
@@ -28,20 +28,42 @@ export default function AdvantageSection() {
                     We don&apos;t sell theoretical infrastructure.
                   </p>
                 </div>
-                <div className="relative h-[88px]">
-                  <div className="absolute left-0 bottom-0 rounded-lg bg-card-surface-solid shadow-sm px-3 py-2 flex items-center gap-3 w-[216px]">
-                    <div className="h-8 w-8 rounded-md bg-teal-500" />
+                {/* White Rounded Container for Cards */}
+                <div className="absolute left-2 right-2 bottom-2 h-[110px] bg-white rounded-xl shadow-xs overflow-hidden select-none">
+                  {/* Teal Card (Back) */}
+                  <div className="absolute left-[69px] top-[47px] w-[216px] h-10 bg-white rounded-lg shadow-[0_2px_4px_rgba(204,221,238,0.25)] border border-grey-100 flex items-center p-1">
+                    <Image
+                      src="/images/proven-icon-teal.svg"
+                      alt=""
+                      width={40}
+                      height={38}
+                      className="rounded-md object-contain"
+                    />
                   </div>
-                  <div className="absolute left-2 bottom-8 rounded-lg bg-card-surface-solid shadow-sm px-3 py-2 flex items-center gap-3 w-[239px]">
-                    <div className="h-8 w-8 rounded-md bg-blue-600" />
+                  {/* Blue Card (Middle) */}
+                  <div className="absolute left-[57px] top-[38px] w-[239px] h-10 bg-white rounded-lg shadow-[0_2px_4px_rgba(204,221,238,0.25)] border border-grey-100 flex items-center p-1">
+                    <Image
+                      src="/images/proven-icon-blue.svg"
+                      alt=""
+                      width={40}
+                      height={38}
+                      className="rounded-md object-contain"
+                    />
                   </div>
-                  <div className="absolute left-4 bottom-16 rounded-lg bg-card-surface-solid shadow-sm px-3 py-2 flex items-center gap-3 w-[255px]">
-                    <div className="h-8 w-8 rounded-md bg-primary-300" />
-                    <div>
-                      <p className="font-heading text-2xl font-bold text-shade-black leading-6">
+                  {/* Orange Card ($500k - Front) */}
+                  <div className="absolute left-[49px] top-[23px] w-[255px] h-[52px] bg-white rounded-lg shadow-[0_2px_4px_rgba(204,221,238,0.25)] border border-grey-100 flex items-center p-1.5 gap-3">
+                    <Image
+                      src="/images/proven-icon-orange.svg"
+                      alt=""
+                      width={40}
+                      height={38}
+                      className="rounded-md object-contain"
+                    />
+                    <div className="flex flex-col justify-center">
+                      <p className="font-heading text-lg font-bold text-shade-black leading-none">
                         $500k
                       </p>
-                      <p className="text-xs font-sans font-light text-grey-600 tracking-tight">
+                      <p className="text-[10px] font-sans font-light text-grey-500 leading-none mt-0.5">
                         Monthly Volume
                       </p>
                     </div>
@@ -113,7 +135,7 @@ export default function AdvantageSection() {
             {/* Column 3 */}
             <div className="flex flex-col gap-6">
               {/* 3 Services, 1 Platform */}
-              <div className="rounded-2xl bg-card-surface h-[195px] p-6 relative overflow-hidden">
+              <div className="rounded-2xl bg-card-surface pt-6 px-6 pb-2 h-[195px] relative overflow-hidden">
                 <div className="relative z-10 space-y-1">
                   <h3 className="font-heading text-base font-bold text-grey-800 tracking-[0.015em]">
                     3 Service, 1 Platform
@@ -122,20 +144,45 @@ export default function AdvantageSection() {
                     Payments + Escrow + Infrastructure, unified.
                   </p>
                 </div>
-                <div className="absolute right-0 bottom-0 w-40 h-32 opacity-60">
-                  <Image
-                    src="/images/advantage-3-services-bg.png"
-                    alt=""
-                    fill
-                    className="object-cover"
-                    sizes="160px"
-                    aria-hidden="true"
-                  />
-                </div>
-                <div className="absolute right-12 top-10 flex items-end gap-2 z-10">
-                  <div className="h-10 w-10 rounded-md bg-blue-600 shadow-md" />
-                  <div className="h-12 w-12 rounded-md bg-primary-300 shadow-md" />
-                  <div className="h-10 w-10 rounded-md bg-teal-500 shadow-md" />
+                {/* White Rounded Container for Logo and Service Icons */}
+                <div className="absolute left-2 right-2 bottom-2 h-[110px] bg-white rounded-xl shadow-xs overflow-hidden select-none">
+                  {/* Brand Logo Background */}
+                  <div className="absolute -left-[96px] -top-[35px] w-[256px] h-[185px] pointer-events-none opacity-80">
+                    <Image
+                      src="/images/advantage-3-services-bg.png"
+                      alt=""
+                      fill
+                      className="object-cover"
+                      sizes="256px"
+                    />
+                  </div>
+                  {/* Blue Service Icon (Left) */}
+                  <div className="absolute left-[147px] top-[36px] w-[48px] h-[47px] shadow-[0_2px_8px_rgba(19,122,199,0.15)] rounded-md overflow-hidden">
+                    <Image
+                      src="/images/service-icon-blue.svg"
+                      alt="Core Infrastructure"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  {/* Teal Service Icon (Middle) */}
+                  <div className="absolute left-[191px] top-[40px] w-[42px] h-[40px] shadow-[0_2px_8px_rgba(0,160,153,0.15)] rounded-md overflow-hidden">
+                    <Image
+                      src="/images/service-icon-teal.svg"
+                      alt="Escrow"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  {/* Orange Service Icon (Right) */}
+                  <div className="absolute left-[228px] top-[38px] w-[44px] h-[43px] shadow-[0_2px_8px_rgba(247,122,74,0.15)] rounded-md overflow-hidden">
+                    <Image
+                      src="/images/service-icon-orange.svg"
+                      alt="Payments"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
                 </div>
               </div>
 
