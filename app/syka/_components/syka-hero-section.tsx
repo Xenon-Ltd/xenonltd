@@ -16,7 +16,7 @@ export default function SykaHeroSection() {
             priority
           />
           <div className="absolute inset-0 bg-black/20" />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-white/20 backdrop-blur-[12.5px]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-white/20 backdrop-blur-[2px]" />
           <div className="absolute inset-0 flex flex-col justify-center p-8 md:p-12 lg:p-16">
             <SectionTag dotColor="bg-white" className="mb-4">
               <span className="text-white">Subsidiary Company</span>

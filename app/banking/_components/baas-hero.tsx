@@ -23,7 +23,7 @@ export default function BaasHero() {
               sizes="100vw"
             />
             {/* Blur overlay */}
-            <div className="absolute inset-0 bg-white/5 backdrop-blur-[12.5px]" />
+            <div className="absolute inset-0 bg-white/5 backdrop-blur-[2px]" />
             {/* Dark gradient for text readability (Figma 270deg black gradient) */}
             <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
           </div>
@@ -32,7 +32,7 @@ export default function BaasHero() {
           <div className="relative z-10 max-w-4xl px-8 sm:px-12 py-16 flex flex-col items-start gap-4">
             {/* Tag */}
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-4 py-1.5 border border-white/20 shadow-xs">
-              <span className="h-2 w-2 rounded-full bg-primary-400 animate-pulse" />
+              <span className="h-2 w-2 rounded-full bg-primary-400" />
               <span className="font-heading text-xs font-bold uppercase tracking-[0.15em] text-white">
                 Banking as a Service
               </span>
