@@ -14,7 +14,7 @@ export default function CollageDiamond({
   gradient,
 }: CollageDiamondProps) {
   return (
-    <div className={`absolute aspect-square ${className}`}>
+    <div className={`absolute ${className}`}>
       <div
         className="w-full h-full rotate-45 rounded-[2.5rem] overflow-hidden p-[8px] sm:p-[10px]"
         style={{

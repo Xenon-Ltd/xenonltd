@@ -42,8 +42,8 @@ export default function FinalCtaSection({
         <div className="absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-[#F9F4F1] to-transparent z-10" />
         <div className="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-[#F9F4F1] to-transparent z-10" />
 
-        {/* Figma Gradient Overlay 2: Ambient blue color-blend overlay to blend text */}
-        <div className="absolute inset-0 bg-blue-600/15 mix-blend-multiply z-0" />
+        {/* Figma Gradient Overlay 2: Ambient gray-bluish color-blend overlay to blend text */}
+        <div className="absolute inset-0 bg-[#667185]/20 mix-blend-multiply z-0" />
       </div>
 
       {!empty && (

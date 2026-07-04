@@ -6,14 +6,17 @@ import Container from "@/shared/ui/container";
 
 export default function HeroSection() {
   return (
-    <div className="flex flex-col min-h-[100dvh] bg-[#F9F4F1] selection:bg-orange-100 selection:text-orange-900">
+    <div className="flex flex-col min-h-[100dvh] bg-[#F9F4F1] selection:bg-orange-100 selection:text-orange-900 relative">
       <Navbar />
-      <main className="flex-1 flex items-center py-8 sm:py-12 md:py-16 lg:py-20 w-full">
-        <Container className="flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
-          <div className="w-full lg:max-w-[50%] xl:max-w-[45%] lg:pr-8 xl:pr-12">
+      <main className="flex-1 flex items-center py-12 lg:py-20 w-full relative">
+        <Container className="relative grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 items-center min-h-[500px]">
+          {/* Left Text Column */}
+          <div className="w-full max-w-[558px] z-10">
             <HeroContent />
           </div>
-          <div className="w-full lg:flex-1 lg:min-w-0 flex items-center justify-center lg:justify-start">
+
+          {/* Right Collage Column: touch/overflow right wall on desktop, flow on mobile */}
+          <div className="w-full relative aspect-[1.06] mt-8 lg:mt-0 lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:w-[48vw] lg:h-[45.28vw] lg:-right-[12vw] xl:w-[902px] xl:h-[851px] xl:-right-44 max-w-[902px] max-h-[851px] select-none pointer-events-none">
             <HeroCollage />
           </div>
         </Container>
