@@ -32,7 +32,7 @@ export default function FooterSection() {
           src="/images/footer-bg.png"
           alt=""
           fill
-          className="object-cover object-top"
+          className="object-cover object-bottom"
           sizes="100vw"
           priority={false}
           aria-hidden="true"

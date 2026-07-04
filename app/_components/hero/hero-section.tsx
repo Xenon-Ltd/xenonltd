@@ -16,7 +16,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right Collage Column: touch/overflow right wall on desktop, flow on mobile */}
-          <div className="w-full relative aspect-[1.06] mt-8 lg:mt-0 lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:w-[48vw] lg:h-[45.28vw] lg:-right-[12vw] xl:w-[902px] xl:h-[851px] xl:-right-44 max-w-[902px] max-h-[851px] select-none pointer-events-none">
+          <div className="w-full relative aspect-[1.06] mt-8 lg:mt-0 lg:absolute lg:top-[-60px] lg:left-[50%] lg:w-[45%] lg:aspect-[902/851] xl:left-[590px] xl:w-[760px] xl:h-[717px] select-none pointer-events-none">
             <HeroCollage />
           </div>
         </Container>
