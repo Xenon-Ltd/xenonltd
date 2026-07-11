@@ -7,6 +7,8 @@ interface PortfolioCardProps {
   imageSrc: string;
   imageAlt: string;
   className?: string;
+  backgroundElements?: React.ReactNode;
+  aspectRatio?: "square" | "tall";
 }
 
 export default function PortfolioCard({
@@ -15,23 +17,30 @@ export default function PortfolioCard({
   imageSrc,
   imageAlt,
   className = "",
+  backgroundElements,
+  aspectRatio = "square",
 }: PortfolioCardProps) {
+  const aspectClass = aspectRatio === "tall" ? "aspect-[515/714]" : "aspect-square";
+
   return (
     <div className={`flex flex-col space-y-5 ${className}`}>
-      <div className="relative aspect-square w-full rounded-[2rem] md:rounded-[3rem] overflow-hidden group shadow-sm">
-        <Image
-          src={imageSrc}
-          alt={imageAlt}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, 50vw"
-        />
-        {/* Bottom blur overlay */}
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-white/20 to-transparent backdrop-blur-[12.5px]" />
+      <div className={`relative w-full ${aspectClass}`}>
+        {backgroundElements}
+        <div className="relative w-full h-full rounded-[2rem] md:rounded-[3rem] overflow-hidden group shadow-sm z-10">
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+          {/* Bottom blur overlay */}
+          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-white/20 to-transparent backdrop-blur-[12.5px]" />
 
-        <PrimaryButton className="absolute bottom-6 left-6 text-xs py-3 px-5">
-          Learn more
-        </PrimaryButton>
+          <PrimaryButton className="absolute bottom-6 left-6 text-xs py-3 px-5">
+            Learn more
+          </PrimaryButton>
+        </div>
       </div>
 
       <div className="flex flex-col space-y-1.5 pl-2">

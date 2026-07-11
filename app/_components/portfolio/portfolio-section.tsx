@@ -13,35 +13,63 @@ export default function PortfolioSection() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-12 gap-y-12 md:gap-y-24 items-start">
-          <div className="flex flex-col space-y-12 md:space-y-24 md:pt-36">
-            <PortfolioCard
-              tag="Core Systems"
-              title="Banking System as a Service"
-              imageSrc="/images/portfolio-feature-1.png"
-              imageAlt="Banking System as a Service"
-            />
-            <PortfolioCard
-              tag="Foundation Layer"
-              title="Compliance & Financial Infrastructure"
-              imageSrc="/images/portfolio-feature-4.png"
-              imageAlt="Compliance & Financial Infrastructure"
-            />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-[90px] gap-y-12 items-start overflow-visible max-w-[1040px] mx-auto">
+          <div className="flex flex-col space-y-12 md:space-y-[328px] md:pt-[485px]">
+            <div className="max-w-[475px] w-full">
+              <PortfolioCard
+                tag="Core Systems"
+                title="Banking System as a Service"
+                imageSrc="/images/portfolio-feature-1.png"
+                imageAlt="Banking System as a Service"
+                aspectRatio="tall"
+              />
+            </div>
+            <div className="max-w-[475px] w-full">
+              <PortfolioCard
+                tag="Foundation Layer"
+                title="Compliance & Financial Infrastructure"
+                imageSrc="/images/portfolio-feature-4.png"
+                imageAlt="Compliance & Financial Infrastructure"
+                aspectRatio="square"
+                backgroundElements={
+                  <>
+                    {/* Red/Orange perfect circle */}
+                    <div className="absolute hidden md:block w-[21.2%] aspect-square rounded-full border border-[#E84D1C] pointer-events-none -top-[6.7%] left-[88%] z-0" />
+                    {/* Teal rounded box (border-radius 16%) */}
+                    <div className="absolute hidden md:block w-full h-full rounded-[16%] border border-[#00A099] pointer-events-none -top-[23.8%] left-[-38.1%] rotate-[-4.13deg] z-0" />
+                  </>
+                }
+              />
+            </div>
           </div>
 
-          <div className="flex flex-col space-y-12 md:space-y-24">
-            <PortfolioCard
-              tag="Subsidiary Company"
-              title="Syka: Cross-Border Payments, Proven at Scale"
-              imageSrc="/images/portfolio-feature-2.png"
-              imageAlt="Syka Cross-Border Payments"
-            />
-            <PortfolioCard
-              tag="Escrow"
-              title="Escrow Service: Programmable Transaction Security"
-              imageSrc="/images/portfolio-feature-3.png"
-              imageAlt="Escrow Service"
-            />
+          <div className="flex flex-col space-y-12 md:space-y-[248px] md:pt-[244px]">
+            <div className="max-w-[475px] w-full">
+              <PortfolioCard
+                tag="Subsidiary Company"
+                title="Syka: Cross-Border Payments, Proven at Scale"
+                imageSrc="/images/portfolio-feature-2.png"
+                imageAlt="Syka Cross-Border Payments"
+                aspectRatio="square"
+                backgroundElements={
+                  <>
+                    {/* Yellow perfect circle */}
+                    <div className="absolute hidden md:block w-[21.2%] aspect-square rounded-full border border-[#F8B032] pointer-events-none -top-[6.7%] left-[-9.2%] z-0" />
+                    {/* Blue rounded box (border-radius 16%) */}
+                    <div className="absolute hidden md:block w-full h-full rounded-[16%] border border-[#137AC7] pointer-events-none -top-[23.8%] left-[31.2%] rotate-[-4.13deg] z-0" />
+                  </>
+                }
+              />
+            </div>
+            <div className="max-w-[475px] w-full">
+              <PortfolioCard
+                tag="Escrow"
+                title="Escrow Service: Programmable Transaction Security"
+                imageSrc="/images/portfolio-feature-3.png"
+                imageAlt="Escrow Service"
+                aspectRatio="tall"
+              />
+            </div>
           </div>
         </div>
       </Container>
