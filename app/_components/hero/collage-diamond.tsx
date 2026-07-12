@@ -5,6 +5,7 @@ interface CollageDiamondProps {
   alt: string;
   className?: string;
   gradient: string;
+  style?: React.CSSProperties;
 }
 
 export default function CollageDiamond({
@@ -12,9 +13,13 @@ export default function CollageDiamond({
   alt,
   className = "",
   gradient,
+  style,
 }: CollageDiamondProps) {
   return (
-    <div className={`absolute flex items-center justify-center ${className}`}>
+    <div 
+      className={`absolute flex items-center justify-center ${className}`}
+      style={style}
+    >
       <div
         className="w-[70.71%] h-[70.71%] rotate-45 rounded-[1.8rem] sm:rounded-[2rem] overflow-hidden p-[6px] sm:p-[8px]"
         style={{
