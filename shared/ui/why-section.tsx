@@ -31,7 +31,7 @@ export default function WhySection({
   const cards = testimonials.slice(0, 4);
 
   const spacer = (
-    <div className="bg-[#CCDDEE40] rounded-[6px] border border-zinc-200/50 shadow-xs h-20 w-full select-none" />
+    <div className="hidden sm:block bg-[#CCDDEE40] rounded-[6px] border border-zinc-200/50 shadow-xs h-20 w-full select-none" />
   );
 
   return (
@@ -69,14 +69,33 @@ export default function WhySection({
           </div>
 
           {/* Bottom Compliance Badges */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="flex items-center gap-3">
-              <span className="text-primary-400 font-bold text-lg select-none">🏛️</span>
-              <span className="font-sans text-sm font-semibold text-grey-700">Licensed operation</span>
+          <div className="flex flex-row items-center gap-[60px] md:gap-[100px] pt-4 select-none">
+            {/* Licensed Badge */}
+            <div className="flex flex-col items-center gap-4 text-center w-[139px]">
+              <img 
+                src="/images/why-icon-licensed.svg" 
+                alt="Licensed operation icon" 
+                width={40} 
+                height={40} 
+                className="w-10 h-10 object-contain"
+              />
+              <span className="font-sans text-sm font-light text-grey-700 tracking-[0.015em] leading-none">
+                Licensed operation
+              </span>
             </div>
-            <div className="flex items-center gap-3">
-              <span className="text-success-400 font-bold text-lg select-none">🛡️</span>
-              <span className="font-sans text-sm font-semibold text-grey-700">SOC 2 Type II Certified</span>
+
+            {/* SOC 2 Badge */}
+            <div className="flex flex-col items-center gap-4 text-center w-[167px]">
+              <img 
+                src="/images/why-icon-soc2.svg" 
+                alt="SOC 2 Certified icon" 
+                width={40} 
+                height={40} 
+                className="w-10 h-10 object-contain"
+              />
+              <span className="font-sans text-sm font-light text-grey-700 tracking-[0.015em] leading-none">
+                SOC 2 Type II Certified
+              </span>
             </div>
           </div>
 

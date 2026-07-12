@@ -20,8 +20,9 @@ export default function Navbar({ showCta = false }: NavbarProps) {
       className="relative z-50 w-full"
       onMouseLeave={() => setActiveDropdown(null)}
     >
-      <nav className="mx-auto max-w-7xl px-6 py-6 md:py-8" aria-label="Global">
-        <div className="flex items-center justify-between">
+      <nav className="w-full" aria-label="Global">
+        <Container className="py-6 md:py-8">
+          <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5" aria-label="Xenon Home">
@@ -172,6 +173,7 @@ export default function Navbar({ showCta = false }: NavbarProps) {
             </div>
           </div>
         )}
+        </Container>
       </nav>
 
       {/* Solutions Dropdown Panel */}
