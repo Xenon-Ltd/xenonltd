@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=Syne:wght@400..800&display=swap');
 @import "tailwindcss";
 
 :root {
+  --font-heading: 'Syne', sans-serif;
+  --font-paragraph: 'IBM Plex Sans', sans-serif;
   --background: #F9F4F1;
   --foreground: #171717;
 

@@ -27,11 +27,9 @@ export default function WhySection({
   ctaText = "View Case Studies",
   ctaHref = "#case-studies",
 }: WhySectionProps) {
-  // Ensure we have exactly 4 items to render
   const cards = testimonials.slice(0, 4);
-
   const spacer = (
-    <div className="hidden sm:block bg-[#CCDDEE40] rounded-[6px] border border-zinc-200/50 shadow-xs h-20 w-full select-none" />
+    <div className="hidden xl:block bg-[#CCDDEE40] rounded-[6px] border border-zinc-200/50 shadow-xs h-20 w-full select-none" />
   );
 
   return (
