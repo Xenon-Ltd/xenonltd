@@ -1,23 +1,24 @@
 import Image from "next/image";
 import Container from "@/shared/ui/container";
 import SectionTag from "@/shared/ui/section-tag";
+import Reveal from "@/shared/ui/reveal";
 
 export default function AdvantageSection() {
   return (
     <section id="advantage" className="w-full py-16 md:py-24">
       <Container>
         <div className="rounded-[40px] bg-card-surface-solid p-6 sm:p-10 lg:p-12">
-          <div className="flex flex-col space-y-4 max-w-[640px] mb-12">
+          <Reveal className="flex flex-col space-y-4 max-w-[640px] mb-12">
             <SectionTag>Xenon Advantage</SectionTag>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-heading font-extrabold text-grey-800 tracking-[0.015em] leading-[1.08]">
               One Financial Bedrock.
             </h2>
-          </div>
+          </Reveal>
 
           {/* 3-column masonry layout matching Figma */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Column 1 */}
-            <div className="flex flex-col gap-6">
+            <Reveal className="flex flex-col gap-6">
               {/* Proven Infrastructure */}
               <div className="rounded-2xl bg-card-surface pt-6 px-6 pb-2 h-[195px] flex flex-col justify-between relative overflow-hidden">
                 <div className="space-y-1">
@@ -93,10 +94,10 @@ export default function AdvantageSection() {
                   />
                 </div>
               </div>
-            </div>
+            </Reveal>
 
             {/* Column 2 */}
-            <div className="flex flex-col gap-6">
+            <Reveal className="flex flex-col gap-6" delay={120}>
               {/* Stablecoin-Native */}
               <div className="rounded-2xl bg-card-surface h-[432px] flex flex-col overflow-hidden p-6">
                 <div className="space-y-1 text-center mb-4">
@@ -130,10 +131,10 @@ export default function AdvantageSection() {
                   </h3>
                 </div>
               </div>
-            </div>
+            </Reveal>
 
             {/* Column 3 */}
-            <div className="flex flex-col gap-6">
+            <Reveal className="flex flex-col gap-6" delay={240}>
               {/* 3 Services, 1 Platform */}
               <div className="rounded-2xl bg-card-surface pt-6 px-6 pb-2 h-[195px] relative overflow-hidden">
                 <div className="relative z-10 space-y-1">
@@ -208,7 +209,7 @@ export default function AdvantageSection() {
                   </div>
                 </div>
               </div>
-            </div>
+            </Reveal>
           </div>
         </div>
       </Container>

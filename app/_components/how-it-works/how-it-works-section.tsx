@@ -2,6 +2,7 @@ import Image from "next/image";
 import Container from "@/shared/ui/container";
 import SectionTag from "@/shared/ui/section-tag";
 import PrimaryButton from "@/shared/ui/primary-button";
+import Reveal from "@/shared/ui/reveal";
 
 const layers = [
   {
@@ -26,7 +27,7 @@ export default function HowItWorksSection() {
     <section id="how-it-works" className="w-full py-20 md:py-28 bg-[#F9F4F1] overflow-hidden">
       <Container className="relative min-h-[310px] flex flex-col lg:flex-row items-start justify-between">
         {/* Left Column: Heading and Tag */}
-        <div className="w-full lg:w-[527px] flex flex-col space-y-6 z-10 lg:pt-4">
+        <Reveal className="w-full lg:w-[527px] flex flex-col space-y-6 z-10 lg:pt-4">
           <SectionTag>How It All Works</SectionTag>
           <h2 className="text-3xl sm:text-4xl md:text-[48px] font-heading font-bold text-grey-800 tracking-[0.015em] leading-[1.1] max-w-[527px]">
             Three Layers of Infrastructure. One Unified Platform.
@@ -34,10 +35,10 @@ export default function HowItWorksSection() {
           <div className="pt-2">
             <PrimaryButton>Learn more</PrimaryButton>
           </div>
-        </div>
+        </Reveal>
 
         {/* Right Column: Layer stack diagram */}
-        <div className="w-full relative aspect-[1.06] mt-12 lg:mt-0 lg:absolute lg:left-[631px] lg:top-0 lg:w-[704px] lg:h-[308px] select-none pointer-events-none z-0">
+        <Reveal delay={150} className="w-full relative aspect-[1.06] mt-12 lg:mt-0 lg:absolute lg:left-[631px] lg:top-0 lg:w-[704px] lg:h-[308px] select-none pointer-events-none z-0">
           {/* Soft orange radial background glow matching Figma "Mission" #6755:267 */}
           <div className="absolute top-1/2 left-[70%] -translate-x-1/2 -translate-y-1/2 w-[467px] h-[469px] bg-[#FF9F81]/25 blur-[54.5px] rounded-full pointer-events-none" />
 
@@ -79,10 +80,10 @@ export default function HowItWorksSection() {
                     </div>
                 ))}
               </div>
-            </div>
+            </Reveal>
 
         {/* Mobile: Standard responsive vertical layout */}
-        <div className="block md:hidden relative pl-8 w-full mt-12">
+        <Reveal delay={150} className="block md:hidden relative pl-8 w-full mt-12">
           {/* Vertical dashed line */}
           <div className="absolute left-8 top-8 bottom-8 w-px border-l border-dashed border-grey-400" />
 
@@ -105,7 +106,7 @@ export default function HowItWorksSection() {
               </div>
             ))}
           </div>
-        </div>
+        </Reveal>
       </Container>
     </section>
   );
