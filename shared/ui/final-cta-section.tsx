@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Container from "@/shared/ui/container";
 import PrimaryButton from "@/shared/ui/primary-button";
+import Reveal from "@/shared/ui/reveal";
 
 interface FinalCtaSectionProps {
   title?: string;
@@ -48,7 +49,7 @@ export default function FinalCtaSection({
 
       {!empty && (
         <Container className="relative z-20 py-20 flex justify-center text-center">
-          <div className="flex flex-col items-center gap-8 max-w-[750px]">
+          <Reveal className="flex flex-col items-center gap-8 max-w-[750px]">
             <div className="flex flex-col items-center gap-6">
               {/* Title */}
               <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-[0.015em] text-white select-none whitespace-pre-line">
@@ -65,7 +66,7 @@ export default function FinalCtaSection({
             <PrimaryButton>
               {displayCtaText}
             </PrimaryButton>
-          </div>
+          </Reveal>
         </Container>
       )}
     </section>

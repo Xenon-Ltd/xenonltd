@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Container from "@/shared/ui/container";
 import SectionTag from "@/shared/ui/section-tag";
+import Reveal from "@/shared/ui/reveal";
 
 export default function OurVisionSection() {
   return (
@@ -9,16 +10,17 @@ export default function OurVisionSection() {
         <div className="rounded-[40px] bg-card-surface-solid p-6 sm:p-10 lg:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Left: Heading */}
-            <div className="flex flex-col space-y-4">
+            <Reveal className="flex flex-col space-y-4">
               <SectionTag>Our Vision</SectionTag>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-grey-800 tracking-[0.015em] leading-[1.08]">
                 Our Vision for Africa&apos;s Financial Future
               </h2>
-            </div>
+            </Reveal>
 
             {/* Right: Body + Mission card */}
             <div className="flex flex-col gap-12">
-              <p className="font-sans text-lg md:text-2xl font-light leading-[1.45] tracking-[0.015em] text-shade-black">
+              <Reveal delay={150}>
+                <p className="font-sans text-lg md:text-2xl font-light leading-[1.45] tracking-[0.015em] text-shade-black">
                 To become the essential infrastructure holding company that
                 enables Africa&apos;s financial institutions to lead the
                 continent&apos;s payment and fintech revolution.
@@ -39,9 +41,10 @@ export default function OurVisionSection() {
                 instant. Where African businesses trade with each other and with
                 the world on equal footing, competing globally without being
                 penalized for geography.
-              </p>
+                </p>
+              </Reveal>
 
-              <div className="relative rounded-3xl overflow-hidden bg-primary-400 min-h-[140px] flex items-center p-6">
+              <Reveal delay={300} className="relative rounded-3xl overflow-hidden bg-primary-400 min-h-[140px] flex items-center p-6">
                 <Image
                   src="/images/vision-map.png"
                   alt="African expansion map"
@@ -57,7 +60,7 @@ export default function OurVisionSection() {
                     Syka Expansion Footprint · Growing to 54 African Nations
                   </p>
                 </div>
-              </div>
+              </Reveal>
             </div>
           </div>
         </div>

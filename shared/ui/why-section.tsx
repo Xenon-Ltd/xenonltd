@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "@/shared/ui/container";
+import Reveal from "@/shared/ui/reveal";
 import TestimonialCard from "./testimonial-card";
 
 export interface TestimonialData {
@@ -37,7 +38,7 @@ export default function WhySection({
       <Container className="grid grid-cols-1 xl:grid-cols-2 gap-12 xl:gap-16 items-start">
 
         {/* LEFT COLUMN: Trust, Heading, and CTAs */}
-        <div className="xl:self-stretch flex flex-col justify-between space-y-10">
+        <Reveal className="xl:self-stretch flex flex-col justify-between space-y-10">
 
           {/* Top Block */}
           <div className="flex flex-col space-y-6">
@@ -97,13 +98,13 @@ export default function WhySection({
             </div>
           </div>
 
-        </div>
+        </Reveal>
 
         {/* RIGHT COLUMN: Staggered Testimonials Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start">
 
           {/* Sub-Column 1 */}
-          <div className="flex flex-col space-y-6">
+          <Reveal delay={150} className="flex flex-col space-y-6">
             {staggerDirection === "left-first" && spacer}
             {cards[0] && (
               <TestimonialCard
@@ -122,10 +123,10 @@ export default function WhySection({
               />
             )}
             {staggerDirection === "right-first" && spacer}
-          </div>
+          </Reveal>
 
           {/* Sub-Column 2 */}
-          <div className="flex flex-col space-y-6">
+          <Reveal delay={300} className="flex flex-col space-y-6">
             {staggerDirection === "right-first" && spacer}
             {cards[2] && (
               <TestimonialCard
@@ -144,7 +145,7 @@ export default function WhySection({
               />
             )}
             {staggerDirection === "left-first" && spacer}
-          </div>
+          </Reveal>
 
         </div>
 
