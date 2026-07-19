@@ -1,21 +1,22 @@
 import Container from "@/shared/ui/container";
 import SectionTag from "@/shared/ui/section-tag";
+import Reveal from "@/shared/ui/reveal";
 import PortfolioCard from "@/app/_components/portfolio/portfolio-card";
 
 export default function PortfolioSection() {
   return (
     <section id="portfolio" className="w-full py-16 md:py-24">
       <Container>
-        <div className="flex flex-col space-y-6 max-w-[790px] mb-16 md:mb-24">
+        <Reveal className="flex flex-col space-y-6 max-w-[790px] mb-16 md:mb-24">
           <SectionTag>The Xenon Portfolio</SectionTag>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-heading font-extrabold text-grey-800 tracking-[0.015em] leading-[1.08]">
             Four Building Blocks. One Complete Ecosystem.
           </h2>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-[90px] gap-y-12 items-start overflow-visible max-w-[1040px] mx-auto">
           <div className="flex flex-col space-y-12 md:space-y-[328px] md:pt-[485px]">
-            <div className="max-w-[475px] w-full">
+            <Reveal className="max-w-[475px] w-full">
               <PortfolioCard
                 tag="Core Systems"
                 title="Banking System as a Service"
@@ -23,8 +24,8 @@ export default function PortfolioSection() {
                 imageAlt="Banking System as a Service"
                 aspectRatio="tall"
               />
-            </div>
-            <div className="max-w-[475px] w-full">
+            </Reveal>
+            <Reveal className="max-w-[475px] w-full" delay={150}>
               <PortfolioCard
                 tag="Foundation Layer"
                 title="Compliance & Financial Infrastructure"
@@ -40,11 +41,11 @@ export default function PortfolioSection() {
                   </>
                 }
               />
-            </div>
+            </Reveal>
           </div>
 
           <div className="flex flex-col space-y-12 md:space-y-[248px] md:pt-[244px]">
-            <div className="max-w-[475px] w-full">
+            <Reveal className="max-w-[475px] w-full" delay={150}>
               <PortfolioCard
                 tag="Subsidiary Company"
                 title="Syka: Cross-Border Payments, Proven at Scale"
@@ -60,8 +61,8 @@ export default function PortfolioSection() {
                   </>
                 }
               />
-            </div>
-            <div className="max-w-[475px] w-full">
+            </Reveal>
+            <Reveal className="max-w-[475px] w-full" delay={300}>
               <PortfolioCard
                 tag="Escrow"
                 title="Escrow Service: Programmable Transaction Security"
@@ -69,7 +70,7 @@ export default function PortfolioSection() {
                 imageAlt="Escrow Service"
                 aspectRatio="tall"
               />
-            </div>
+            </Reveal>
           </div>
         </div>
       </Container>
