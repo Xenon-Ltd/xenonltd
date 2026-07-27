@@ -17,15 +17,11 @@ export default function PrimaryButton({
 
   const variantStyles =
     variant === "solid"
-      ? "bg-primary-400 text-white hover:bg-primary-300"
+      ? "bg-primary-400 text-white hover:bg-success-400 hover:text-[#E9FF1F]"
       : "bg-transparent text-primary-400 hover:bg-primary-400/5";
 
   return (
     <button type="button" className={`${baseStyles} ${variantStyles} ${className}`} {...props}>
-      <span
-        className={`h-2.5 w-2.5 rounded-full ${variant === "solid" ? "bg-success-400" : "bg-primary-400"}`}
-        aria-hidden="true"
-      />
       {children}
     </button>
   );
