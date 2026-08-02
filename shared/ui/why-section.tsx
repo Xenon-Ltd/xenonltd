@@ -24,18 +24,18 @@ export default function WhySection({
   title,
   description,
   testimonials,
-  staggerDirection = "right-first",
   ctaText = "View Case Studies",
   ctaHref = "#case-studies",
 }: WhySectionProps) {
   const cards = testimonials.slice(0, 4);
-  const spacer = (
-    <div className="hidden xl:block bg-[#CCDDEE40] rounded-[6px] border border-zinc-200/50 shadow-xs h-20 w-full select-none" />
-  );
+
+  // Duplicate cards for continuous, seamless infinite marquee scrolling
+  const col1Cards = [cards[0], cards[1], cards[0], cards[1]].filter(Boolean);
+  const col2Cards = [cards[2], cards[3], cards[2], cards[3]].filter(Boolean);
 
   return (
     <section id="why" className="w-full bg-transparent py-8 md:py-12">
-      <Container className="grid grid-cols-1 xl:grid-cols-2 gap-12 xl:gap-16 items-start">
+      <Container className="grid grid-cols-1 xl:grid-cols-2 gap-12 xl:gap-16 items-center">
 
         {/* LEFT COLUMN: Trust, Heading, and CTAs */}
         <Reveal className="xl:self-stretch flex flex-col justify-between space-y-10">
@@ -100,53 +100,37 @@ export default function WhySection({
 
         </Reveal>
 
-        {/* RIGHT COLUMN: Staggered Testimonials Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start">
+        {/* RIGHT COLUMN: Endless Dual-Column Opposite Marquee Grid */}
+        <div className="relative max-h-[580px] md:max-h-[640px] overflow-hidden rounded-2xl [mask-image:linear-gradient(to_bottom,transparent,black_8%,black_92%,transparent)]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start">
 
-          {/* Sub-Column 1 */}
-          <Reveal delay={150} className="flex flex-col space-y-6">
-            {staggerDirection === "left-first" && spacer}
-            {cards[0] && (
-              <TestimonialCard
-                quote={cards[0].quote}
-                authorName={cards[0].authorName}
-                authorRole={cards[0].authorRole}
-                minHeightClass="md:min-h-[300px]"
-              />
-            )}
-            {cards[1] && (
-              <TestimonialCard
-                quote={cards[1].quote}
-                authorName={cards[1].authorName}
-                authorRole={cards[1].authorRole}
-                minHeightClass="md:min-h-[300px]"
-              />
-            )}
-            {staggerDirection === "right-first" && spacer}
-          </Reveal>
+            {/* Sub-Column 1: Moving UP continuously */}
+            <div className="flex flex-col space-y-6 animate-marquee-up hover:[animation-play-state:paused]">
+              {col1Cards.map((card, index) => (
+                <TestimonialCard
+                  key={`col1-${index}`}
+                  quote={card.quote}
+                  authorName={card.authorName}
+                  authorRole={card.authorRole}
+                  minHeightClass="md:min-h-[280px]"
+                />
+              ))}
+            </div>
 
-          {/* Sub-Column 2 */}
-          <Reveal delay={300} className="flex flex-col space-y-6">
-            {staggerDirection === "right-first" && spacer}
-            {cards[2] && (
-              <TestimonialCard
-                quote={cards[2].quote}
-                authorName={cards[2].authorName}
-                authorRole={cards[2].authorRole}
-                minHeightClass="md:min-h-[300px]"
-              />
-            )}
-            {cards[3] && (
-              <TestimonialCard
-                quote={cards[3].quote}
-                authorName={cards[3].authorName}
-                authorRole={cards[3].authorRole}
-                minHeightClass="md:min-h-[300px]"
-              />
-            )}
-            {staggerDirection === "left-first" && spacer}
-          </Reveal>
+            {/* Sub-Column 2: Moving DOWN continuously */}
+            <div className="flex flex-col space-y-6 animate-marquee-down hover:[animation-play-state:paused]">
+              {col2Cards.map((card, index) => (
+                <TestimonialCard
+                  key={`col2-${index}`}
+                  quote={card.quote}
+                  authorName={card.authorName}
+                  authorRole={card.authorRole}
+                  minHeightClass="md:min-h-[280px]"
+                />
+              ))}
+            </div>
 
+          </div>
         </div>
 
       </Container>

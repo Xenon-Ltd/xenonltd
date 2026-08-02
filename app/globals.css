@@ -82,3 +82,31 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading), sans-serif;
 }
+
+/* Endless Marquee Keyframes for Dual Column Scrolling */
+@keyframes marquee-up {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes marquee-down {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.animate-marquee-up {
+  animation: marquee-up 28s linear infinite;
+}
+
+.animate-marquee-down {
+  animation: marquee-down 28s linear infinite;
+}
+

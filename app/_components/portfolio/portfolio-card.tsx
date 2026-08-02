@@ -35,7 +35,7 @@ export default function PortfolioCard({
             sizes="(max-width: 768px) 100vw, 50vw"
           />
           {/* Bottom blur overlay */}
-          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-white/20 to-transparent backdrop-blur-[12.5px]" />
+          {/* <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-white/20 to-transparent backdrop-blur-[12.5px]" /> */}
 
           <PrimaryButton className="absolute bottom-6 left-6 text-xs py-3 px-5">
             Learn more
