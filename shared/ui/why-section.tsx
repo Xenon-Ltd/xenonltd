@@ -102,11 +102,11 @@ export default function WhySection({
         </Reveal>
 
         {/* RIGHT COLUMN: Endless Dual-Column Opposite Marquee Grid */}
-        <div className="relative max-h-[580px] md:max-h-[640px] overflow-hidden rounded-2xl [mask-image:linear-gradient(to_bottom,transparent,black_8%,black_92%,transparent)]">
+        <div className="relative group cursor-pointer max-h-[580px] md:max-h-[640px] overflow-hidden rounded-2xl [mask-image:linear-gradient(to_bottom,transparent,black_8%,black_92%,transparent)]">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start">
 
             {/* Sub-Column 1: Moving UP continuously */}
-            <div className="flex flex-col space-y-6 animate-marquee-up hover:[animation-play-state:paused]">
+            <div className="flex flex-col space-y-6 animate-marquee-up">
               {col1Cards.map((card, index) => (
                 <TestimonialCard
                   key={`col1-${index}`}
@@ -119,7 +119,7 @@ export default function WhySection({
             </div>
 
             {/* Sub-Column 2: Moving DOWN continuously */}
-            <div className="flex flex-col space-y-6 animate-marquee-down hover:[animation-play-state:paused]">
+            <div className="flex flex-col space-y-6 animate-marquee-down">
               {col2Cards.map((card, index) => (
                 <TestimonialCard
                   key={`col2-${index}`}

@@ -110,3 +110,8 @@ h1, h2, h3, h4, h5, h6 {
   animation: marquee-down 28s linear infinite;
 }
 
+.group:hover .animate-marquee-up,
+.group:hover .animate-marquee-down {
+  animation-play-state: paused !important;
+}
+
