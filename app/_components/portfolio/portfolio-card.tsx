@@ -26,12 +26,12 @@ export default function PortfolioCard({
     <div className={`flex flex-col space-y-5 ${className}`}>
       <div className={`relative w-full ${aspectClass}`}>
         {backgroundElements}
-        <div className="relative w-full h-full rounded-[2rem] md:rounded-[3rem] overflow-hidden group shadow-sm z-10">
+        <div className="relative w-full h-full rounded-[2rem] md:rounded-[3rem] overflow-hidden group shadow-sm z-10 isolate [transform:translateZ(0)] [-webkit-mask-image:-webkit-radial-gradient(white,black)]">
           <Image
             src={imageSrc}
             alt={imageAlt}
             fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            className="object-cover scale-105 transition-all duration-300 group-hover:brightness-85 group-hover:opacity-90"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
           {/* Bottom blur overlay */}

@@ -6,7 +6,7 @@ import Reveal from "@/shared/ui/reveal";
 
 /**
  * AboutFounder Component
- * 
+ *
  * Renders the "Meet the Founder" leadership section on the About page.
  * Corresponds to Figma node #7358:16687.
  */
@@ -19,7 +19,7 @@ export default function AboutFounder() {
             {/* Left Column: Leadership Tag, Heading & Description */}
             <div className="flex flex-col gap-6 max-w-[594px] w-full">
               <SectionTag>Our Leadership</SectionTag>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-grey-800 tracking-[0.015em] leading-[1.08]">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-heading font-extrabold text-grey-800 tracking-[0.015em] leading-[1.08]">
                 Meet the Founder
               </h2>
               <p className="font-sans text-lg sm:text-xl text-grey-500 font-light leading-relaxed">

@@ -1,6 +1,8 @@
 import React from "react";
+import Link from "next/link";
 import Container from "@/shared/ui/container";
 import Reveal from "@/shared/ui/reveal";
+import PrimaryButton from "@/shared/ui/primary-button";
 import TestimonialCard from "./testimonial-card";
 
 export interface TestimonialData {
@@ -58,12 +60,11 @@ export default function WhySection({
             </div>
 
             <div>
-              <a
-                href={ctaHref}
-                className="inline-flex items-center justify-center rounded-full bg-primary-400 px-8 py-3.5 font-sans text-base font-semibold text-white shadow-sm hover:bg-primary-300 transition-colors duration-200"
-              >
-                {ctaText}
-              </a>
+              <Link href={ctaHref}>
+                <PrimaryButton>
+                  {ctaText}
+                </PrimaryButton>
+              </Link>
             </div>
           </div>
 

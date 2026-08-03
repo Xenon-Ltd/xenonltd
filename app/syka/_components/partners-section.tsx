@@ -1,5 +1,7 @@
+import Link from "next/link";
 import Container from "@/shared/ui/container";
 import SectionTag from "@/shared/ui/section-tag";
+import PrimaryButton from "@/shared/ui/primary-button";
 
 export default function PartnersSection() {
   return (
@@ -18,12 +20,11 @@ export default function PartnersSection() {
                 use it.
               </p>
               <div>
-                <a
-                  href="#contact"
-                  className="inline-flex items-center justify-center rounded-full bg-primary-400 px-7 py-3.5 font-sans text-base font-medium text-white hover:bg-primary-300 transition-colors"
-                >
-                  Schedule a Partnership Call
-                </a>
+                <Link href="#contact">
+                  <PrimaryButton>
+                    Schedule a Partnership Call
+                  </PrimaryButton>
+                </Link>
               </div>
             </div>
           </div>
