@@ -33,6 +33,7 @@ export default function PortfolioSection() {
                 imageSrc="/images/portfolio-feature-4.png"
                 imageAlt="Compliance & Financial Infrastructure"
                 aspectRatio="square"
+                imageFit="contain"
                 href="/compliance"
                 backgroundElements={
                   <>

@@ -11,6 +11,8 @@ interface PortfolioCardProps {
   className?: string;
   backgroundElements?: React.ReactNode;
   aspectRatio?: "square" | "tall";
+  /** Controls how the image fills its container. Defaults to "cover". Use "contain" when the image has text near the edges that must not be cropped. */
+  imageFit?: "cover" | "contain";
 }
 
 export default function PortfolioCard({
@@ -22,6 +24,7 @@ export default function PortfolioCard({
   className = "",
   backgroundElements,
   aspectRatio = "square",
+  imageFit = "cover",
 }: PortfolioCardProps) {
   const aspectClass = aspectRatio === "tall" ? "aspect-[515/714]" : "aspect-square";
 
@@ -40,7 +43,7 @@ export default function PortfolioCard({
             src={imageSrc}
             alt={imageAlt}
             fill
-            className="object-cover scale-105 transition-all duration-300 group-hover:brightness-85 group-hover:opacity-90"
+            className={`${imageFit === "contain" ? "object-contain" : "object-cover scale-105"} transition-all duration-300 group-hover:brightness-85 group-hover:opacity-90`}
             sizes="(max-width: 768px) 100vw, 50vw"
           />
           {/* Bottom blur overlay */}

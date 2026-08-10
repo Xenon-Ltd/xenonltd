@@ -29,14 +29,15 @@ const stats = [
 export default function StatsBarSection() {
   return (
     <section className="w-full px-4 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl rounded-3xl bg-primary-400 px-2 py-8 md:py-10">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+      <div className="mx-auto max-w-7xl rounded-3xl bg-primary-400 px-4 sm:px-6 py-8 md:py-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className={`flex flex-col gap-1 px-4 py-4 md:px-6 ${
+              className={`flex flex-col gap-1 px-4 py-5 sm:py-4 ${
+                /* On mobile (single col): draw a bottom border between items, not on the last */
                 index < stats.length - 1
-                  ? "border-r border-white/20 last:border-r-0"
+                  ? "border-b border-white/20 sm:border-b-0 sm:border-r sm:last:border-r-0"
                   : ""
               }`}
             >
