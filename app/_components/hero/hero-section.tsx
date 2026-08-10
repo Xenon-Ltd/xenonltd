@@ -8,7 +8,7 @@ export default function HeroSection() {
   return (
     <div className="flex flex-col min-h-[100dvh] bg-[#F9F4F1] selection:bg-orange-100 selection:text-orange-900 relative">
       <Navbar />
-      <main className="flex-1 flex items-center pt-12 pb-8 lg:pt-20 lg:pb-36 w-full relative">
+      <main className="flex-1 flex items-center pt-8 pb-4 lg:pt-20 lg:pb-36 w-full relative">
         <Container className="relative grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 items-center min-h-[500px] lg:min-h-[640px]">
           {/* Left Text Column */}
           <div className="w-full max-w-[558px] z-10">

@@ -77,13 +77,13 @@ export default function WhoWeAreSection() {
     <section
       id="who-we-are"
       ref={sectionRef}
-      className="relative w-full bg-[#F9F4F1] h-[160vh] md:h-[250vh]"
+      className="relative w-full bg-[#F9F4F1] h-[110vh] md:h-[250vh]"
     >
       {/* Pinned viewport: stays fixed while scroll drives the phrase reveals */}
       <div className="sticky top-0 h-dvh flex items-center justify-center overflow-hidden">
         <Container className="w-full px-4 sm:px-6">
           <div className="relative mx-auto max-w-4xl text-center">
-            <p className="font-heading text-2xl sm:text-3xl md:text-[40px] font-extrabold leading-[1.35] tracking-[0.015em] text-primary-400">
+            <p className="font-heading text-[17px] sm:text-3xl md:text-[40px] font-extrabold leading-[1.35] tracking-[0.015em] text-primary-400">
               {statement.map((phrase, index) => {
                 let opacity = 1;
                 let translateY = 0;
