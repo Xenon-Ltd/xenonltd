@@ -9,8 +9,8 @@ export default function BaasHero() {
       {/* Navbar with CTA */}
       <Navbar showCta />
 
-      {/* Hero Banner Card */}
-      <div className="flex-1 flex items-center py-12 px-4 sm:px-6 lg:px-8">
+      {/* Hero Banner Card — outer div only handles vertical padding; Container handles horizontal */}
+      <div className="flex-1 flex items-center py-12">
         <Container className="relative rounded-[2rem] overflow-hidden min-h-[500px] flex items-center w-full shadow-md">
           {/* Background Image & Overlay */}
           <div className="absolute inset-0 z-0">
@@ -29,7 +29,7 @@ export default function BaasHero() {
           </div>
 
           {/* Texts */}
-          <div className="relative z-10 max-w-4xl px-8 sm:px-12 py-16 flex flex-col items-start gap-4">
+          <div className="relative z-10 max-w-4xl px-6 sm:px-10 py-12 flex flex-col items-start gap-4">
             {/* Tag */}
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-4 py-1.5 border border-white/20 shadow-xs">
               <span className="h-2 w-2 rounded-full bg-primary-400" />

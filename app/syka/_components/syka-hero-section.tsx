@@ -4,7 +4,7 @@ import SectionTag from "@/shared/ui/section-tag";
 
 export default function SykaHeroSection() {
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8 pt-8 pb-12">
+    <section className="w-full pt-8 pb-12">
       <Container>
         <div className="relative w-full min-h-[420px] md:min-h-[500px] lg:min-h-[542px] rounded-3xl overflow-hidden">
           <Image
