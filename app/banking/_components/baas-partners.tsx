@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Container from "@/shared/ui/container";
 import SectionTag from "@/shared/ui/section-tag";
 import PrimaryButton from "@/shared/ui/primary-button";
@@ -23,7 +24,9 @@ export default function BaasPartners() {
               the red tape.
             </p>
             <div>
-              <PrimaryButton>Schedule a Partnership Call</PrimaryButton>
+              <Link href="/contact">
+                <PrimaryButton>Schedule a Partnership Call</PrimaryButton>
+              </Link>
             </div>
           </div>
         </div>

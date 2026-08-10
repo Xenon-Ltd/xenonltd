@@ -20,7 +20,7 @@ export default function PartnersSection() {
                 use it.
               </p>
               <div>
-                <Link href="#contact">
+                <Link href="/contact">
                   <PrimaryButton>
                     Schedule a Partnership Call
                   </PrimaryButton>

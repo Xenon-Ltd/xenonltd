@@ -16,7 +16,7 @@ export default function PortfolioSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-[90px] gap-y-12 items-start overflow-visible max-w-[1040px] mx-auto">
           <div className="flex flex-col space-y-12 md:space-y-[328px] md:pt-[485px]">
-            <Reveal className="max-w-[475px] w-full">
+            <Reveal className="w-full max-w-none md:max-w-[475px] mx-auto">
               <PortfolioCard
                 tag="Core Systems"
                 title="Banking System as a Service"
@@ -26,7 +26,7 @@ export default function PortfolioSection() {
                 href="/banking"
               />
             </Reveal>
-            <Reveal className="max-w-[475px] w-full" delay={150}>
+            <Reveal className="w-full max-w-none md:max-w-[475px] mx-auto" delay={150}>
               <PortfolioCard
                 tag="Foundation Layer"
                 title="Compliance & Financial Infrastructure"
@@ -47,7 +47,7 @@ export default function PortfolioSection() {
           </div>
 
           <div className="flex flex-col space-y-12 md:space-y-[248px] md:pt-[244px]">
-            <Reveal className="max-w-[475px] w-full" delay={150}>
+            <Reveal className="w-full max-w-none md:max-w-[475px] mx-auto" delay={150}>
               <PortfolioCard
                 tag="Subsidiary Company"
                 title="Syka: Cross-Border Payments, Proven at Scale"
@@ -65,7 +65,7 @@ export default function PortfolioSection() {
                 }
               />
             </Reveal>
-            <Reveal className="max-w-[475px] w-full" delay={300}>
+            <Reveal className="w-full max-w-none md:max-w-[475px] mx-auto" delay={300}>
               <PortfolioCard
                 tag="Escrow"
                 title="Escrow Service: Programmable Transaction Security"

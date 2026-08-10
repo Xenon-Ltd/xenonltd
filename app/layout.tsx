@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://xenonlimited.co";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -31,9 +31,10 @@ export const metadata: Metadata = {
     siteName: "Xenon",
     images: [
       {
-        url: "/images/final-cta-bg.png",
+        url: `${siteUrl}/images/xenon-logo.png`,
         width: 1200,
         height: 630,
+        type: "image/png",
         alt: "Xenon - Africa's Financial Operating System",
       },
     ],
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     title: "Xenon | Africa's Financial Operating System",
     description:
       "We empower financial institutions with stablecoin-powered payments, transaction security, and compliance frameworks across Africa.",
-    images: ["/images/final-cta-bg.png"],
+    images: [`${siteUrl}/images/xenon-logo.png`],
   },
   icons: {
     icon: [
