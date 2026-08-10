@@ -101,9 +101,11 @@ export default function Navbar({ showCta = false }: NavbarProps) {
           {/* Desktop Right Spacer (keeps links centered in visual alignment) */}
           <div className="hidden md:flex md:flex-1 md:justify-end">
             {showCta && (
-              <PrimaryButton className="text-sm py-2 px-5">
-                Schedule Consultation
-              </PrimaryButton>
+              <Link href="/contact">
+                <PrimaryButton className="text-sm py-2 px-5">
+                  Schedule Consultation
+                </PrimaryButton>
+              </Link>
             )}
           </div>
         </div>
@@ -156,7 +158,7 @@ export default function Navbar({ showCta = false }: NavbarProps) {
                   About Us
                 </Link>
                 <Link
-                  href="/why"
+                  href="/#why"
                   className="block rounded-lg px-6 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-50 hover:text-black transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
@@ -302,7 +304,7 @@ export default function Navbar({ showCta = false }: NavbarProps) {
                   </span>
                 </Link>
                 <Link 
-                  href="/why" 
+                  href="/#why" 
                   className="flex items-center gap-3 group/link p-2 -mx-2 rounded-xl hover:bg-[#F9F4F1] transition-colors"
                   onClick={() => setActiveDropdown(null)}
                 >

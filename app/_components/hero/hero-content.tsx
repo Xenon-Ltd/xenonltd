@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PrimaryButton from "@/shared/ui/primary-button";
 
 export default function HeroContent() {
@@ -13,7 +14,9 @@ export default function HeroContent() {
         compete globally.
       </p>
 
-      <PrimaryButton>Explore Ecosystem</PrimaryButton>
+      <Link href="#portfolio">
+        <PrimaryButton>Explore Ecosystem</PrimaryButton>
+      </Link>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Container from "@/shared/ui/container";
 import SectionTag from "@/shared/ui/section-tag";
 import PrimaryButton from "@/shared/ui/primary-button";
@@ -33,7 +34,9 @@ export default function HowItWorksSection() {
             Three Layers of Infrastructure. One Unified Platform.
           </h2>
           <div className="pt-2">
-            <PrimaryButton>Learn more</PrimaryButton>
+            <Link href="/about">
+              <PrimaryButton>Learn more</PrimaryButton>
+            </Link>
           </div>
         </Reveal>
 

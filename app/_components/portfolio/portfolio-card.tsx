@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import PrimaryButton from "@/shared/ui/primary-button";
 
 interface PortfolioCardProps {
@@ -6,6 +7,7 @@ interface PortfolioCardProps {
   title: string;
   imageSrc: string;
   imageAlt: string;
+  href?: string;
   className?: string;
   backgroundElements?: React.ReactNode;
   aspectRatio?: "square" | "tall";
@@ -16,11 +18,18 @@ export default function PortfolioCard({
   title,
   imageSrc,
   imageAlt,
+  href,
   className = "",
   backgroundElements,
   aspectRatio = "square",
 }: PortfolioCardProps) {
   const aspectClass = aspectRatio === "tall" ? "aspect-[515/714]" : "aspect-square";
+
+  const buttonElement = (
+    <PrimaryButton className="absolute bottom-6 left-6 text-xs py-3 px-5">
+      Learn more
+    </PrimaryButton>
+  );
 
   return (
     <div className={`flex flex-col space-y-5 ${className}`}>
@@ -37,9 +46,7 @@ export default function PortfolioCard({
           {/* Bottom blur overlay */}
           {/* <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-white/20 to-transparent backdrop-blur-[12.5px]" /> */}
 
-          <PrimaryButton className="absolute bottom-6 left-6 text-xs py-3 px-5">
-            Learn more
-          </PrimaryButton>
+          {href ? <Link href={href}>{buttonElement}</Link> : buttonElement}
         </div>
       </div>
 
@@ -51,7 +58,13 @@ export default function PortfolioCard({
           </span>
         </div>
         <h4 className="text-xl md:text-2xl font-heading font-bold text-grey-800 leading-snug tracking-tight">
-          {title}
+          {href ? (
+            <Link href={href} className="hover:text-primary-400 transition-colors">
+              {title}
+            </Link>
+          ) : (
+            title
+          )}
         </h4>
       </div>
     </div>

@@ -23,6 +23,7 @@ export default function PortfolioSection() {
                 imageSrc="/images/portfolio-feature-1.png"
                 imageAlt="Banking System as a Service"
                 aspectRatio="tall"
+                href="/banking"
               />
             </Reveal>
             <Reveal className="max-w-[475px] w-full" delay={150}>
@@ -32,6 +33,7 @@ export default function PortfolioSection() {
                 imageSrc="/images/portfolio-feature-4.png"
                 imageAlt="Compliance & Financial Infrastructure"
                 aspectRatio="square"
+                href="/compliance"
                 backgroundElements={
                   <>
                     {/* Red/Orange perfect circle */}
@@ -52,6 +54,7 @@ export default function PortfolioSection() {
                 imageSrc="/images/portfolio-feature-2.png"
                 imageAlt="Syka Cross-Border Payments"
                 aspectRatio="square"
+                href="/syka"
                 backgroundElements={
                   <>
                     {/* Yellow perfect circle */}
@@ -69,6 +72,7 @@ export default function PortfolioSection() {
                 imageSrc="/images/portfolio-feature-3.png"
                 imageAlt="Escrow Service"
                 aspectRatio="tall"
+                href="/escrow"
               />
             </Reveal>
           </div>

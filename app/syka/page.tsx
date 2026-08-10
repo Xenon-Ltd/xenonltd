@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Navbar from "@/app/_components/navbar";
 import FooterSection from "@/app/_components/footer/footer-section";
 import SykaHeroSection from "./_components/syka-hero-section";
@@ -6,6 +7,12 @@ import StatsBarSection from "./_components/stats-bar-section";
 import PartnersSection from "./_components/partners-section";
 import GrowthStorySection from "./_components/growth-story-section";
 import FinalCtaSection from "@/shared/ui/final-cta-section";
+
+export const metadata: Metadata = {
+  title: "Syka | Cross-Border Payments",
+  description:
+    "Cross-border payment service, proven at scale across 18+ African expansion footprints.",
+};
 
 export default function SykaPage() {
   return (

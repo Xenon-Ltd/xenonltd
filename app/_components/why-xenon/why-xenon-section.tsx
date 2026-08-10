@@ -32,7 +32,7 @@ export default function WhyXenonSection() {
       testimonials={testimonials}
       staggerDirection="right-first"
       ctaText="View Case Studies"
-      ctaHref="#case-studies"
+      ctaHref="/contact"
     />
   );
 }

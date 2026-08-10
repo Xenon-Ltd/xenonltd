@@ -1,9 +1,16 @@
 import React from "react";
+import type { Metadata } from "next";
 import Navbar from "@/app/_components/navbar";
 import ContactForm from "./_components/contact-form";
 import FooterSection from "../_components/footer/footer-section";
 import Container from "@/shared/ui/container";
 import FinalCtaSection from "@/shared/ui/final-cta-section";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description:
+    "Schedule a consultation with a sales specialist. We are here to assist you in your business journey.",
+};
 
 export default function ContactPage() {
   return (

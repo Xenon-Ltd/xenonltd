@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Container from "@/shared/ui/container";
 import PrimaryButton from "@/shared/ui/primary-button";
 import Reveal from "@/shared/ui/reveal";
@@ -63,9 +64,11 @@ export default function FinalCtaSection({
             </div>
 
             {/* CTA Button */}
-            <PrimaryButton>
-              {displayCtaText}
-            </PrimaryButton>
+            <Link href="/contact">
+              <PrimaryButton>
+                {displayCtaText}
+              </PrimaryButton>
+            </Link>
           </Reveal>
         </Container>
       )}

@@ -1,26 +1,57 @@
 import Image from "next/image";
+import Link from "next/link";
 import Logo from "@/app/_components/logo";
 
-const footerLinks = [
+interface FooterLinkItem {
+  name: string;
+  href: string;
+}
+
+interface FooterColumn {
+  title: string;
+  links: FooterLinkItem[];
+}
+
+const footerLinks: FooterColumn[] = [
   {
     title: "Company",
-    links: ["About", "Blog", "Careers"],
+    links: [
+      { name: "About", href: "/about" },
+      { name: "Blog", href: "/contact" },
+      { name: "Careers", href: "/contact" },
+    ],
   },
   {
     title: "Portfolio",
-    links: ["Syka", "Kura"],
+    links: [
+      { name: "Syka", href: "/syka" },
+      { name: "Kura", href: "/#portfolio" },
+    ],
   },
   {
     title: "Services",
-    links: ["Cross-border Payment", "Payment Infrastructure", "Compliance", "Escrow"],
+    links: [
+      { name: "Cross-border Payment", href: "/syka" },
+      { name: "Payment Infrastructure", href: "/banking" },
+      { name: "Compliance", href: "/compliance" },
+      { name: "Escrow", href: "/escrow" },
+    ],
   },
   {
     title: "Resources",
-    links: ["API Documentation", "Case Studies", "Regulatory Info"],
+    links: [
+      { name: "API Documentation", href: "/contact" },
+      { name: "Case Studies", href: "/contact" },
+      { name: "Regulatory Info", href: "/compliance" },
+    ],
   },
   {
     title: "Support",
-    links: ["partnership@xenonlimited.co", "Twitter", "LinkedIn"],
+    links: [
+      { name: "partnership@xenonlimited.co", href: "mailto:partnership@xenonlimited.co" },
+      { name: "Twitter", href: "https://twitter.com" },
+      { name: "LinkedIn", href: "https://linkedin.com" },
+    ],
   },
 ];
 
@@ -59,13 +90,13 @@ export default function FooterSection() {
                   </h4>
                   <ul className="space-y-3">
                     {column.links.map((link) => (
-                      <li key={link}>
-                        <a
-                          href="#"
+                      <li key={link.name}>
+                        <Link
+                          href={link.href}
                           className="font-sans text-sm text-office-brown-800 hover:text-primary-400 transition-colors break-words"
                         >
-                          {link}
-                        </a>
+                          {link.name}
+                        </Link>
                       </li>
                     ))}
                   </ul>

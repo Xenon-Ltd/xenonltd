@@ -72,6 +72,10 @@
   --color-card-surface-solid: var(--card-surface-solid);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
