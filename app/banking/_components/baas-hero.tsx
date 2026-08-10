@@ -39,7 +39,7 @@ export default function BaasHero() {
             </div>
 
             {/* Title */}
-            <h1 className="font-heading text-xl sm:text-4xl md:text-5xl lg:text-[72px] font-bold leading-[1.05] tracking-tight uppercase text-white max-w-[15ch]">
+            <h1 className="font-heading text-2xl sm:text-4xl md:text-5xl lg:text-[72px] font-bold leading-[1.05] tracking-tight uppercase text-white max-w-[15ch]">
               Xenon Limited&apos;s Banking as a Service
             </h1>
           </div>

@@ -39,7 +39,7 @@ export default function EscrowHero() {
             </div>
 
             {/* Title */}
-            <h1 className="font-heading text-xl sm:text-4xl md:text-5xl lg:text-[72px] font-bold leading-[1.05] tracking-tight uppercase text-white max-w-[20ch]">
+            <h1 className="font-heading text-2xl sm:text-4xl md:text-5xl lg:text-[72px] font-bold leading-[1.05] tracking-tight uppercase text-white max-w-[20ch]">
               Escrow Service: Programmable Transaction Security
             </h1>
           </div>
