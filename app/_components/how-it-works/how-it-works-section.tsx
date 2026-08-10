@@ -40,8 +40,8 @@ export default function HowItWorksSection() {
           </div>
         </Reveal>
 
-        {/* Right Column: Layer stack diagram */}
-        <Reveal delay={150} className="w-full relative aspect-[1.06] mt-12 lg:mt-0 lg:absolute lg:left-[631px] lg:top-0 lg:w-[704px] lg:h-[308px] select-none pointer-events-none z-0">
+        {/* Right Column: Layer stack diagram (Desktop only) */}
+        <Reveal delay={150} className="hidden lg:block w-full relative aspect-[1.06] mt-12 lg:mt-0 lg:absolute lg:left-[631px] lg:top-0 lg:w-[704px] lg:h-[308px] select-none pointer-events-none z-0">
           {/* Soft orange radial background glow matching Figma "Mission" #6755:267 */}
           <div className="absolute top-1/2 left-[70%] -translate-x-1/2 -translate-y-1/2 w-[467px] h-[469px] bg-[#FF9F81]/25 blur-[54.5px] rounded-full pointer-events-none" />
 
@@ -63,41 +63,41 @@ export default function HowItWorksSection() {
               fill
               className="object-contain object-left"
               sizes="280px"
-                />
-              </div>
+            />
+          </div>
 
           {/* Layer Cards on the Left (w: 330px, h: 70px each, x: 0px relative to frame) */}
           <div className="absolute inset-y-0 left-0 w-[330px] z-30">
-                {layers.map((layer, index) => (
-                  <div
-                    key={layer.number}
-                    className="absolute left-0 w-[330px] h-[70px] bg-[#FAFAFA] rounded-lg shadow-[0_2px_4px_rgba(204,221,238,0.25)] border border-grey-100/10 flex flex-col justify-center px-4 py-3 hover:shadow-md transition-shadow duration-200"
-                    style={{ top: `${index * 118}px` }}
-                  >
-                  <p className="font-heading text-base font-bold text-zinc-900 tracking-[0.015em] leading-snug">
-                        {layer.title}
-                      </p>
-                  <p className="font-sans text-xs text-grey-500 font-light leading-none mt-0.5">
-                        {layer.subtitle}
-                      </p>
-                    </div>
-                ))}
+            {layers.map((layer, index) => (
+              <div
+                key={layer.number}
+                className="absolute left-0 w-[330px] h-[70px] bg-[#FAFAFA] rounded-lg shadow-[0_2px_4px_rgba(204,221,238,0.25)] border border-grey-100/10 flex flex-col justify-center px-4 py-3 hover:shadow-md transition-shadow duration-200"
+                style={{ top: `${index * 118}px` }}
+              >
+                <p className="font-heading text-base font-bold text-zinc-900 tracking-[0.015em] leading-snug">
+                  {layer.title}
+                </p>
+                <p className="font-sans text-xs text-grey-500 font-light leading-none mt-0.5">
+                  {layer.subtitle}
+                </p>
               </div>
-            </Reveal>
+            ))}
+          </div>
+        </Reveal>
 
         {/* Mobile: Standard responsive vertical layout */}
-        <Reveal delay={150} className="block md:hidden relative pl-8 w-full mt-12">
+        <Reveal delay={150} className="block lg:hidden relative pl-4 w-full mt-12">
           {/* Vertical dashed line */}
-          <div className="absolute left-8 top-8 bottom-8 w-px border-l border-dashed border-grey-400" />
+          <div className="absolute left-4 top-8 bottom-8 w-px border-l border-dashed border-grey-400" />
 
           <div className="space-y-6 relative">
             {layers.map((layer) => (
               <div
                 key={layer.number}
-                className="relative flex items-center gap-4 rounded-lg bg-white shadow-sm px-4 py-4 ml-6"
+                className="relative flex items-center gap-4 rounded-lg bg-white shadow-sm px-4 py-4 ml-4"
               >
                 {/* Node on the line */}
-                <div className="absolute -left-[34px] top-1/2 -translate-y-1/2 h-3 w-3 rounded-full border-2 border-grey-400 bg-white" />
+                <div className="absolute -left-[22px] top-1/2 -translate-y-1/2 h-3 w-3 rounded-full border-2 border-grey-400 bg-white" />
                 <div>
                   <p className="font-heading text-sm font-bold text-shade-black tracking-[0.015em]">
                     {layer.title}

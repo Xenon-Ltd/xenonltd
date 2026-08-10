@@ -83,7 +83,7 @@ export default function WhoWeAreSection() {
       <div className="sticky top-0 h-dvh flex items-center justify-center overflow-hidden">
         <Container className="w-full px-4 sm:px-6">
           <div className="relative mx-auto max-w-4xl text-center">
-            <p className="font-heading text-xl sm:text-3xl md:text-[40px] font-extrabold leading-[1.35] tracking-[0.015em] text-primary-400">
+            <p className="font-heading text-2xl sm:text-3xl md:text-[40px] font-extrabold leading-[1.35] tracking-[0.015em] text-primary-400">
               {statement.map((phrase, index) => {
                 let opacity = 1;
                 let translateY = 0;
@@ -106,7 +106,7 @@ export default function WhoWeAreSection() {
                 return (
                   <span
                     key={index}
-                    className="inline sm:inline-block whitespace-normal sm:whitespace-nowrap will-change-[opacity,transform]"
+                    className="inline-block whitespace-nowrap will-change-[opacity,transform]"
                     style={{
                       opacity,
                       transform: `translateY(${translateY}px)`,
