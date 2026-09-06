@@ -72,7 +72,7 @@ export default function FooterSection() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 pb-64 pt-16 sm:px-8 sm:pb-72 sm:pt-20 md:px-12 xl:px-20 xl:pb-[320px] xl:pt-[100px]">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 pb-36 pt-16 sm:px-8 sm:pb-48 sm:pt-20 md:px-12 md:pb-60 xl:px-20 xl:pb-[300px] xl:pt-[100px]">
         <div className="flex flex-col gap-12 xl:min-h-[277px] xl:flex-row xl:justify-between xl:gap-0">
           <div className="w-full space-y-4 xl:w-[278px] xl:shrink-0">
             <Link href="/" aria-label="Xenon home" className="inline-block">
