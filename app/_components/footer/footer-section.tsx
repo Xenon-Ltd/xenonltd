@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import FooterLocations from "./footer-locations";
 
 interface FooterLinkItem {
   name: string;
@@ -58,7 +59,7 @@ export default function FooterSection() {
   return (
     <footer className="relative w-full overflow-hidden bg-[#F9F4F1]">
       <div
-        className="absolute inset-x-0 bottom-0 xl:inset-0"
+        className="pointer-events-none absolute inset-x-0 bottom-0"
         style={{ height: "clamp(181px, 41.171875vw, 527px)" }}
         aria-hidden="true"
       >
@@ -66,12 +67,12 @@ export default function FooterSection() {
           src="/images/footer-background-3b5c4e.png"
           alt=""
           fill
-          className="object-fill"
+          className="object-fill object-bottom"
           sizes="100vw"
         />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 pb-56 pt-16 sm:px-8 sm:pt-20 md:px-12 xl:px-20 xl:pb-[150px] xl:pt-[100px]">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 pb-64 pt-16 sm:px-8 sm:pb-72 sm:pt-20 md:px-12 xl:px-20 xl:pb-[320px] xl:pt-[100px]">
         <div className="flex flex-col gap-12 xl:min-h-[277px] xl:flex-row xl:justify-between xl:gap-0">
           <div className="w-full space-y-4 xl:w-[278px] xl:shrink-0">
             <Link href="/" aria-label="Xenon home" className="inline-block">
@@ -112,6 +113,11 @@ export default function FooterSection() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Global Office Locations: pushed upward with tight top margin and ample clearance from skyline */}
+        <div className="mt-4 flex flex-col items-center justify-center text-center sm:mt-6">
+          <FooterLocations />
         </div>
       </div>
     </footer>
