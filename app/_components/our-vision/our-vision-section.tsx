@@ -6,9 +6,9 @@ import Reveal from "@/shared/ui/reveal";
 export default function OurVisionSection() {
   return (
     <section id="our-vision" className="w-full py-16 md:py-24">
-      <Container>
-        <div className="rounded-[40px] bg-card-surface-solid p-6 sm:p-10 lg:p-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+      <Container className="xl:px-10">
+        <div className="rounded-[40px] bg-card-surface-solid p-6 sm:p-10">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[475px_1fr] lg:gap-[31px]">
             {/* Left: Heading */}
             <Reveal className="flex flex-col space-y-4">
               <SectionTag>Our Vision</SectionTag>

@@ -28,28 +28,30 @@ export default function PortfolioCard({
 }: PortfolioCardProps) {
   const aspectClass = aspectRatio === "tall" ? "aspect-[515/714]" : "aspect-square";
 
-  const buttonElement = (
-    <PrimaryButton className="absolute bottom-6 left-6 text-xs py-3 px-5">
-      Learn more
-    </PrimaryButton>
-  );
-
   return (
     <div className={`flex flex-col space-y-5 ${className}`}>
       <div className={`relative w-full ${aspectClass}`}>
         {backgroundElements}
-        <div className="relative w-full h-full rounded-[2rem] md:rounded-[3rem] overflow-hidden group shadow-sm z-10 isolate [transform:translateZ(0)] [-webkit-mask-image:-webkit-radial-gradient(white,black)]">
+        <div className="group relative z-10 isolate h-full w-full overflow-hidden rounded-[clamp(2.75rem,14.3vw,5.125rem)] [transform:translateZ(0)] [-webkit-mask-image:-webkit-radial-gradient(white,black)]">
           <Image
             src={imageSrc}
             alt={imageAlt}
             fill
-            className={`${imageFit === "contain" ? "object-contain" : "object-cover scale-105"} transition-all duration-300 group-hover:brightness-85 group-hover:opacity-90`}
-            sizes="(max-width: 768px) 100vw, 50vw"
+            className={`${imageFit === "contain" ? "object-contain" : "object-cover"} transition-all duration-500 group-hover:scale-[1.015] group-hover:brightness-90`}
+            sizes="(min-width: 1024px) 515px, (min-width: 768px) 44vw, 100vw"
           />
-          {/* Bottom blur overlay */}
-          {/* <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-white/20 to-transparent backdrop-blur-[12.5px]" /> */}
-
-          {href ? <Link href={href}>{buttonElement}</Link> : buttonElement}
+          {href ? (
+            <Link
+              href={href}
+              className="absolute bottom-[clamp(1.5rem,7.8vw,2.5rem)] left-[clamp(1.5rem,7.8%,2.5rem)] inline-flex h-10 w-[clamp(116px,28.75%,148px)] items-center justify-center rounded-full bg-primary-400 px-4 font-sans text-sm font-medium text-white transition-[background-color,color,transform] hover:-translate-y-0.5 hover:bg-success-400 hover:text-[#E9FF1F] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:h-12 md:px-0 md:text-base"
+            >
+              Learn more
+            </Link>
+          ) : (
+            <PrimaryButton className="absolute bottom-[clamp(1.5rem,7.8vw,2.5rem)] left-[clamp(1.5rem,7.8%,2.5rem)] h-10 w-[clamp(116px,28.75%,148px)] px-4 py-0 text-sm md:h-12 md:px-0 md:text-base">
+              Learn more
+            </PrimaryButton>
+          )}
         </div>
       </div>
 

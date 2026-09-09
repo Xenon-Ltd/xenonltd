@@ -1,26 +1,33 @@
-import React from "react";
-import Navbar from "../navbar";
-import HeroContent from "./hero-content";
-import HeroCollage from "./hero-collage";
 import Container from "@/shared/ui/container";
+import Navbar from "../navbar";
+import HeroCollage from "./hero-collage";
+import HeroContent from "./hero-content";
 
 export default function HeroSection() {
   return (
-    <div className="flex flex-col min-h-[100dvh] bg-[#F9F4F1] selection:bg-orange-100 selection:text-orange-900 relative">
+    <section
+      aria-labelledby="home-hero-title"
+      className="relative isolate min-h-svh overflow-clip bg-background selection:bg-primary-400 selection:text-white"
+    >
       <Navbar />
-      <main className="flex-1 flex items-center pt-8 pb-4 lg:pt-20 lg:pb-36 w-full relative">
-        <Container className="relative grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 items-center min-h-[500px] lg:min-h-[640px]">
-          {/* Left Text Column */}
-          <div className="w-full max-w-[558px] z-10">
+
+      <div className="relative mx-auto flex min-h-[calc(100svh-88px)] w-full max-w-[1440px] flex-col justify-center pb-8 pt-7 sm:min-h-[calc(100svh-104px)] sm:pt-10 lg:block lg:min-h-[860px] lg:pb-0 lg:pt-0">
+        <Container className="relative z-20 lg:flex lg:min-h-[860px] lg:items-center">
+          <div className="w-full lg:max-w-[558px]">
             <HeroContent />
           </div>
-
-          {/* Right Collage Column: touch/overflow right wall on desktop, flow on mobile */}
-          <div className="w-full relative aspect-[1.06] mt-8 lg:mt-0 lg:absolute lg:top-[-10px] lg:left-[52%] lg:w-[45%] lg:aspect-[902/851] xl:left-[620px] xl:w-[720px] xl:h-[680px] select-none pointer-events-none">
-            <HeroCollage />
-          </div>
         </Container>
-      </main>
-    </div>
+
+        <div className="relative z-10 ml-auto mt-4 aspect-[902/851] w-[min(112vw,560px)] translate-x-[12%] sm:mt-0 sm:w-[min(94vw,660px)] sm:translate-x-[10%] lg:absolute lg:right-[-12.5rem] lg:top-[-0.75rem] lg:mt-0 lg:w-[min(70.5vw,902px)] lg:translate-x-0 xl:right-[-10.6rem]">
+          <HeroCollage />
+        </div>
+
+      </div>
+
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-20 bg-gradient-to-b from-transparent to-background/95 backdrop-blur-[1px]"
+      />
+    </section>
   );
 }

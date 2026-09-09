@@ -1,8 +1,7 @@
-import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import Container from "@/shared/ui/container";
 import Reveal from "@/shared/ui/reveal";
-import PrimaryButton from "@/shared/ui/primary-button";
 import TestimonialCard from "./testimonial-card";
 
 export interface TestimonialData {
@@ -37,7 +36,8 @@ export default function WhySection({
 
   return (
     <section id="why" className="w-full bg-transparent py-8 md:py-12">
-      <Container className="grid grid-cols-1 xl:grid-cols-2 gap-12 xl:gap-16 items-center">
+      <Container className="xl:px-10">
+        <div className="grid grid-cols-1 items-center gap-12 rounded-[40px] bg-card-surface-solid px-6 py-16 sm:px-10 xl:grid-cols-2 xl:gap-16 xl:py-20">
 
         {/* LEFT COLUMN: Trust, Heading, and CTAs */}
         <Reveal className="xl:self-stretch flex flex-col justify-between space-y-10">
@@ -59,20 +59,19 @@ export default function WhySection({
               </p>
             </div>
 
-            <div>
-              <Link href={ctaHref}>
-                <PrimaryButton>
-                  {ctaText}
-                </PrimaryButton>
-              </Link>
-            </div>
+            <Link
+              href={ctaHref}
+              className="inline-flex h-12 w-fit items-center justify-center rounded-full bg-primary-400 px-6 font-sans text-base font-medium text-white transition-[background-color,color,transform] hover:-translate-y-0.5 hover:bg-success-400 hover:text-[#E9FF1F] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-400"
+            >
+              {ctaText}
+            </Link>
           </div>
 
           {/* Bottom Compliance Badges */}
           <div className="flex flex-row items-center gap-[60px] md:gap-[100px] pt-4 select-none">
             {/* Licensed Badge */}
             <div className="flex flex-col items-center gap-4 text-center w-[139px]">
-              <img 
+              <Image
                 src="/images/why-icon-licensed.svg" 
                 alt="Licensed operation icon" 
                 width={40} 
@@ -86,7 +85,7 @@ export default function WhySection({
 
             {/* SOC 2 Badge */}
             <div className="flex flex-col items-center gap-4 text-center w-[167px]">
-              <img 
+              <Image
                 src="/images/why-icon-soc2.svg" 
                 alt="SOC 2 Certified icon" 
                 width={40} 
@@ -133,7 +132,7 @@ export default function WhySection({
 
           </div>
         </div>
-
+        </div>
       </Container>
     </section>
   );

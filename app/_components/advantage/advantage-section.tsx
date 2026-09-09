@@ -6,9 +6,9 @@ import Reveal from "@/shared/ui/reveal";
 export default function AdvantageSection() {
   return (
     <section id="advantage" className="w-full py-16 md:py-24">
-      <Container>
-        <div className="rounded-[40px] bg-card-surface-solid p-6 sm:p-10 lg:p-12">
-          <Reveal className="flex flex-col space-y-4 max-w-[640px] mb-12">
+      <Container className="xl:px-10">
+        <div className="rounded-[40px] bg-card-surface-solid px-6 py-16 sm:px-10 lg:px-10 lg:py-20">
+          <Reveal className="mb-16 flex max-w-[640px] flex-col space-y-4">
             <SectionTag>Xenon Advantage</SectionTag>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-heading font-extrabold text-grey-800 tracking-[0.015em] leading-[1.08]">
               One Financial Bedrock.
@@ -16,7 +16,7 @@ export default function AdvantageSection() {
           </Reveal>
 
           {/* 3-column masonry layout matching Figma */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-4">
             {/* Column 1 */}
             <Reveal className="flex flex-col gap-6">
               {/* Proven Infrastructure */}

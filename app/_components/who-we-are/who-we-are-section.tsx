@@ -1,146 +1,70 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
+import {
+  motion,
+  useReducedMotion,
+  useScroll,
+  useSpring,
+  useTransform,
+} from "motion/react";
 import Container from "@/shared/ui/container";
+import ScrollRevealWord from "./scroll-reveal-word";
 
-/**
- * Phrases used by the scroll-reveal animation.
- * Each phrase is a `whitespace-nowrap` span so it animates in as one unit.
- */
-const statement = [
-  "We build institutional-grade",
-  "payment systems,",
-  "transaction security",
-  "platforms, and compliance",
-  "frameworks that enable",
-  "financial institutions across",
-  "Africa to innovate, compete",
-  "and grow",
-];
+const statement =
+  "We build institutional-grade payment systems, transaction security platforms, and compliance frameworks that enable financial institutions across Africa to innovate, compete and grow";
 
-/**
- * Full sentence used by the reduced-motion static fallback.
- */
-const STATEMENT =
-  "We build institutional-grade payment systems, transaction security platforms, and compliance frameworks that enable financial institutions across Africa to innovate, compete, and grow.";
+const statementWords = statement.split(" ");
 
 export default function WhoWeAreSection() {
   const sectionRef = useRef<HTMLElement>(null);
-  const [progress, setProgress] = useState(0);
-  const [reducedMotion, setReducedMotion] = useState(false);
-
-  useEffect(() => {
-    let raf = 0;
-
-    const update = () => {
-      const node = sectionRef.current;
-      if (!node) return;
-      const rect = node.getBoundingClientRect();
-      const scrollable = rect.height - window.innerHeight;
-      const pinnedProgress =
-        scrollable > 0 ? Math.min(1, Math.max(0, -rect.top / scrollable)) : 0;
-      setProgress(pinnedProgress);
-    };
-
-    const onScroll = () => {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(update);
-    };
-
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      raf = requestAnimationFrame(() => {
-        setReducedMotion(true);
-        setProgress(1);
-      });
-      return () => cancelAnimationFrame(raf);
-    }
-
-    raf = requestAnimationFrame(update);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    return () => {
-      cancelAnimationFrame(raf);
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-    };
-  }, []);
-
-  // ─── Reduced-motion: static, everything visible at once ───────────────────
-  if (reducedMotion) {
-    return (
-      <section id="who-we-are" className="w-full py-16 md:py-36 bg-[#F9F4F1]">
-        <Container>
-          <div className="relative mx-auto max-w-4xl text-center px-4">
-            <p className="font-heading text-2xl sm:text-3xl md:text-[40px] font-extrabold leading-[1.3] tracking-[0.015em] text-primary-400">
-              {STATEMENT}
-            </p>
-          </div>
-        </Container>
-      </section>
-    );
-  }
+  const reducedMotion = useReducedMotion();
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start 82%", "end 32%"],
+  });
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 110,
+    damping: 28,
+    mass: 0.25,
+  });
+  const textY = useTransform(smoothProgress, [0, 1], [24, -12]);
+  const textScale = useTransform(smoothProgress, [0, 1], [0.975, 1]);
 
   return (
     <section
       id="who-we-are"
       ref={sectionRef}
-      /**
-       * Mobile: h-[200vh] gives 2× the viewport height as scrollable room so
-       * all 8 phrases can animate through without rushing.
-       * Desktop: h-[250vh] keeps the original design.
-       */
-      className="relative w-full bg-[#F9F4F1] h-[200vh] md:h-[250vh]"
+      aria-label={statement}
+      className="relative min-h-[92svh] w-full bg-background md:h-[155svh]"
     >
-      {/*
-       * Sticky pinned viewport.
-       * Mobile:  items-start + pt-20 — text anchors near the top of the screen
-       *          so it appears immediately below the hero with no void gap.
-       * Desktop: items-center — text stays vertically centered as designed.
-       */}
-      <div className="sticky top-0 h-[55vh] md:h-dvh flex items-center justify-center overflow-hidden">
-        <Container className="w-full px-4 sm:px-6">
-          <div className="relative mx-auto max-w-4xl text-center">
-            {/*
-             * Mobile font size is reduced to ~15px so that the longest phrase
-             * ("We build institutional-grade") fits within a ~375px screen
-             * without overflowing the right edge.
-             */}
-            <p className="font-heading text-xl sm:text-3xl md:text-[40px] font-extrabold leading-[1.45] tracking-[0.015em] text-primary-400">
-              {statement.map((phrase, index) => {
-                let opacity = 1;
-                let translateY = 0;
-
-                if (index > 0) {
-                  const stepWindow = 1 / (statement.length - 1);
-                  const start = (index - 1) * stepWindow;
-                  const end = index * stepWindow;
-
-                  const localProgress = Math.min(
-                    1,
-                    Math.max(0, (progress - start) / (end - start))
-                  );
-                  const eased =
-                    localProgress * localProgress * (3 - 2 * localProgress);
-                  opacity = eased;
-                  translateY = (1 - eased) * 24;
-                }
-
-                return (
-                  <span
-                    key={index}
-                    className="inline-block whitespace-normal sm:whitespace-nowrap will-change-[opacity,transform]"
-                    style={{
-                      opacity,
-                      transform: `translateY(${translateY}px)`,
-                    }}
-                  >
-                    {phrase}
-                    {index < statement.length - 1 ? " " : ""}
-                  </span>
-                );
-              })}
+      <div className="flex min-h-[92svh] items-center overflow-hidden py-20 md:sticky md:top-0 md:h-svh md:min-h-0 md:py-16">
+        <Container>
+          <motion.div
+            aria-hidden="true"
+            className="mx-auto max-w-[1000px] text-center"
+            style={
+              reducedMotion
+                ? undefined
+                : {
+                    y: textY,
+                    scale: textScale,
+                  }
+            }
+          >
+            <p className="font-heading text-[clamp(1.65rem,7.2vw,2.15rem)] font-bold leading-[1.18] tracking-[-0.025em] text-grey-500 sm:text-[clamp(2rem,5.4vw,2.5rem)] md:text-[clamp(2.35rem,3.35vw,2.65rem)] md:leading-[1.14]">
+              {statementWords.map((word, index) => (
+                <ScrollRevealWord
+                  index={index}
+                  key={`${word}-${index}`}
+                  progress={smoothProgress}
+                  wordCount={statementWords.length}
+                >
+                  {word}
+                </ScrollRevealWord>
+              ))}
             </p>
-          </div>
+          </motion.div>
         </Container>
       </div>
     </section>

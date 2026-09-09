@@ -12,15 +12,17 @@ import FooterSection from "./_components/footer/footer-section";
 export default function Home() {
   return (
     <div className="bg-background">
-      <HeroSection />
-      <WhoWeAreSection />
-      <MissionVisionSection />
-      <PortfolioSection />
-      <AdvantageSection />
-      <HowItWorksSection />
-      <OurVisionSection />
-      <WhyXenonSection />
-      <FinalCtaSection />
+      <main>
+        <HeroSection />
+        <WhoWeAreSection />
+        <MissionVisionSection />
+        <PortfolioSection />
+        <AdvantageSection />
+        <HowItWorksSection />
+        <OurVisionSection />
+        <WhyXenonSection />
+        <FinalCtaSection />
+      </main>
       <FooterSection />
     </div>
   );

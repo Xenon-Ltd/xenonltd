@@ -19,7 +19,7 @@ export default function ComplianceHero() {
                 className="object-cover"
                 sizes="(min-width: 1280px) 1200px, calc(100vw - 48px)"
               />
-              <div className="absolute inset-0 bg-[#F9F4F1]/5 backdrop-blur-[2px]" />
+              <div className="absolute inset-0 bg-[#F9F4F1]/5 backdrop-blur-[1px]" />
               <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
             </div>
 

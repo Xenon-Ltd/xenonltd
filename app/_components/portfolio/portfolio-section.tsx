@@ -5,28 +5,28 @@ import PortfolioCard from "@/app/_components/portfolio/portfolio-card";
 
 export default function PortfolioSection() {
   return (
-    <section id="portfolio" className="w-full py-16 md:py-24">
+    <section id="portfolio" className="w-full py-16 md:py-20">
       <Container>
-        <Reveal className="flex flex-col space-y-6 max-w-[790px] mb-16 md:mb-24">
+        <Reveal className="mb-16 flex max-w-[790px] flex-col space-y-6 md:mb-24">
           <SectionTag>The Xenon Portfolio</SectionTag>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-heading font-extrabold text-grey-800 tracking-[0.015em] leading-[1.08]">
+          <h2 className="font-heading text-4xl font-extrabold leading-[1.1] tracking-[0.005em] text-grey-800 sm:text-5xl md:text-[56px] xl:text-[72px]">
             Four Building Blocks. One Complete Ecosystem.
           </h2>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-[90px] gap-y-12 items-start overflow-visible max-w-[1040px] mx-auto">
-          <div className="flex flex-col space-y-12 md:space-y-[328px] md:pt-[485px]">
-            <Reveal className="w-full max-w-none md:max-w-[475px] mx-auto">
+        <div className="mx-auto grid max-w-[1120px] grid-cols-1 items-start gap-y-14 overflow-visible md:grid-cols-2 md:gap-x-8 lg:gap-x-14 xl:gap-x-[90px]">
+          <div className="flex flex-col gap-14 md:gap-28 md:pt-28 lg:gap-36 lg:pt-36 xl:gap-[265px] xl:pt-[315px]">
+            <Reveal className="mx-auto w-full max-w-none md:max-w-[515px]">
               <PortfolioCard
                 tag="Core Systems"
                 title="Banking System as a Service"
-                imageSrc="/images/portfolio-feature-1.png"
+                imageSrc="/images/portfolio-feature-2.png"
                 imageAlt="Banking System as a Service"
                 aspectRatio="tall"
                 href="/banking"
               />
             </Reveal>
-            <Reveal className="w-full max-w-none md:max-w-[475px] mx-auto" delay={150}>
+            <Reveal className="mx-auto w-full max-w-none md:max-w-[515px]" delay={80}>
               <PortfolioCard
                 tag="Foundation Layer"
                 title="Compliance & Financial Infrastructure"
@@ -47,12 +47,12 @@ export default function PortfolioSection() {
             </Reveal>
           </div>
 
-          <div className="flex flex-col space-y-12 md:space-y-[248px] md:pt-[244px]">
-            <Reveal className="w-full max-w-none md:max-w-[475px] mx-auto" delay={150}>
+          <div className="flex flex-col gap-14 md:gap-28 lg:gap-36 xl:gap-[170px] xl:pt-[75px]">
+            <Reveal className="mx-auto w-full max-w-none md:max-w-[515px]" delay={80}>
               <PortfolioCard
                 tag="Subsidiary Company"
                 title="Syka: Cross-Border Payments, Proven at Scale"
-                imageSrc="/images/portfolio-feature-2.png"
+                imageSrc="/images/portfolio-feature-1.png"
                 imageAlt="Syka Cross-Border Payments"
                 aspectRatio="square"
                 href="/syka"
@@ -66,7 +66,7 @@ export default function PortfolioSection() {
                 }
               />
             </Reveal>
-            <Reveal className="w-full max-w-none md:max-w-[475px] mx-auto" delay={300}>
+            <Reveal className="mx-auto w-full max-w-none md:max-w-[515px]" delay={120}>
               <PortfolioCard
                 tag="Escrow"
                 title="Escrow Service: Programmable Transaction Security"

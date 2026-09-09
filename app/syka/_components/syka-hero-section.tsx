@@ -15,7 +15,7 @@ export default function SykaHeroSection() {
             priority
           />
           <div className="absolute inset-0 bg-black/20" />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-white/20 backdrop-blur-[6px] lg:backdrop-blur-[12.5px]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-white/20 backdrop-blur-[2px] lg:backdrop-blur-[4px]" />
           <div className="absolute inset-0 flex flex-col justify-center p-6 sm:p-8 lg:p-10">
             <div className="mb-[15px] inline-flex items-center gap-1.5">
               <span

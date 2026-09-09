@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Container from "@/shared/ui/container";
 import SectionTag from "@/shared/ui/section-tag";
-import PrimaryButton from "@/shared/ui/primary-button";
 import Reveal from "@/shared/ui/reveal";
 
 const layers = [
@@ -25,7 +24,7 @@ const layers = [
 
 export default function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="w-full py-20 md:py-28 bg-[#F9F4F1] overflow-hidden">
+    <section id="how-it-works" className="w-full overflow-hidden bg-background py-20 md:py-40">
       <Container className="relative min-h-[310px] flex flex-col lg:flex-row items-start justify-between">
         {/* Left Column: Heading and Tag */}
         <Reveal className="w-full lg:w-[527px] flex flex-col space-y-6 z-10 lg:pt-4">
@@ -33,11 +32,12 @@ export default function HowItWorksSection() {
           <h2 className="text-3xl sm:text-4xl md:text-[48px] font-heading font-bold text-grey-800 tracking-[0.015em] leading-[1.1] max-w-[527px]">
             Three Layers of Infrastructure. One Unified Platform.
           </h2>
-          <div className="pt-2">
-            <Link href="/about">
-              <PrimaryButton>Learn more</PrimaryButton>
-            </Link>
-          </div>
+          <Link
+            href="/about"
+            className="mt-2 inline-flex h-12 w-fit items-center justify-center rounded-full bg-primary-400 px-6 font-sans text-base font-medium text-white transition-[background-color,color,transform] hover:-translate-y-0.5 hover:bg-success-400 hover:text-[#E9FF1F] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-400"
+          >
+            Learn more
+          </Link>
         </Reveal>
 
         {/* Right Column: Layer stack diagram (Desktop only) */}
