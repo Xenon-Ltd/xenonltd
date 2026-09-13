@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://xenonlimited.co";
+const siteUrl = "https://www.xenonlimited.co";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: "/",
+  },
   title: {
     default: "Xenon | Africa's Financial Operating System",
     template: "%s | Xenon",
@@ -24,27 +27,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: siteUrl,
+    url: "/",
     title: "Xenon | Africa's Financial Operating System",
     description:
       "We empower financial institutions with stablecoin-powered payments, transaction security, and compliance frameworks across Africa.",
     siteName: "Xenon",
-    images: [
-      {
-        url: `${siteUrl}/images/xenon-logo.png`,
-        width: 1200,
-        height: 630,
-        type: "image/png",
-        alt: "Xenon - Africa's Financial Operating System",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Xenon | Africa's Financial Operating System",
     description:
       "We empower financial institutions with stablecoin-powered payments, transaction security, and compliance frameworks across Africa.",
-    images: [`${siteUrl}/images/xenon-logo.png`],
   },
   icons: {
     icon: [
