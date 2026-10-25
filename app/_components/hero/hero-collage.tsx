@@ -6,56 +6,48 @@ const diamonds = [
     alt: "Team collaboration",
     position: "left-[0%] top-[6.27%] w-[35.37%] h-[37.49%]",
     gradient: "linear-gradient(138deg, #FAFAFA 52%, #CCDDEE 100%)",
-    step: 2,
   },
   {
     src: "/images/optimized/hero-diamond-5.webp",
     alt: "Financial technology",
     position: "left-[37.02%] top-[0%] w-[35.37%] h-[37.49%] z-10",
     gradient: "linear-gradient(138deg, #FAFAFA 52%, #E63B33 100%)",
-    step: 1,
   },
   {
     src: "/images/optimized/hero-diamond-4.webp",
     alt: "Payment solutions",
     position: "left-[58.75%] top-[16.68%] w-[35.37%] h-[37.49%] z-20",
     gradient: "linear-gradient(138deg, #FAFAFA 52%, #E84D1C 100%)",
-    step: 2,
   },
   {
     src: "/images/optimized/hero-diamond-1.webp",
     alt: "Modern banking",
     position: "left-[21.61%] top-[22.91%] w-[35.37%] h-[37.49%]",
     gradient: "linear-gradient(138deg, #FAFAFA 52%, #137AC7 100%)",
-    step: 0,
   },
   {
     src: "/images/optimized/hero-diamond-3.webp",
     alt: "Cross-border payments",
     position: "left-[43.08%] top-[39.51%] w-[35.37%] h-[37.49%] z-10",
     gradient: "linear-gradient(138deg, #FAFAFA 52%, #F39101 100%)",
-    step: 1,
   },
   {
     src: "/images/optimized/hero-diamond-7.webp",
     alt: "African fintech",
     position: "left-[5.87%] top-[45.94%] w-[35.37%] h-[37.49%]",
     gradient: "linear-gradient(138deg, #FAFAFA 52%, #00A099 100%)",
-    step: 3,
   },
   {
     src: "/images/optimized/hero-diamond-6.webp",
     alt: "Transaction security",
     position: "left-[64.63%] top-[56.05%] w-[35.37%] h-[37.49%]",
     gradient: "linear-gradient(138deg, #FAFAFA 52%, #F8B032 100%)",
-    step: 2,
   },
   {
     src: "/images/optimized/hero-diamond-8.webp",
     alt: "Compliance infrastructure",
     position: "left-[27.60%] top-[62.51%] w-[35.37%] h-[37.49%] z-10",
     gradient: "linear-gradient(138deg, #FAFAFA 52%, #2EB466 100%)",
-    step: 2,
   },
 ];
 
@@ -65,7 +57,7 @@ export default function HeroCollage() {
       aria-hidden="true"
       className="relative h-full w-full select-none"
     >
-      {diamonds.map((diamond) => {
+      {diamonds.map((diamond, index) => {
         return (
           <CollageDiamond
             key={diamond.src}
@@ -73,7 +65,7 @@ export default function HeroCollage() {
             alt={diamond.alt}
             className={diamond.position}
             gradient={diamond.gradient}
-            preload={diamond.step === 0}
+            highPriority={index === 0}
           />
         );
       })}

@@ -20,9 +20,9 @@ export default function MissionVisionSection() {
                 sizes="(min-width: 1280px) 544px, (min-width: 768px) calc(50vw - 96px), calc(100vw - 48px)"
               />
             </div>
-            <h3 className="font-heading text-xl font-bold leading-[1.2] tracking-[0.015em] text-grey-800 md:text-[28px]">
+            <h2 className="font-heading text-xl font-bold leading-[1.2] tracking-[0.015em] text-grey-800 md:text-[28px]">
               Empowering banks with infrastructure
-            </h3>
+            </h2>
           </Reveal>
 
           <Reveal className="flex min-w-0 flex-col gap-6" delay={140}>
@@ -35,9 +35,9 @@ export default function MissionVisionSection() {
                 sizes="(min-width: 1280px) 544px, (min-width: 768px) calc(50vw - 96px), calc(100vw - 48px)"
               />
             </div>
-            <h3 className="font-heading text-xl font-bold leading-[1.2] tracking-[0.015em] text-grey-800 md:text-[28px]">
+            <h2 className="font-heading text-xl font-bold leading-[1.2] tracking-[0.015em] text-grey-800 md:text-[28px]">
               Transforming Africa&apos;s financial services
-            </h3>
+            </h2>
           </Reveal>
         </div>
       </Container>

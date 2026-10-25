@@ -28,6 +28,8 @@ Keep original Figma PNG exports in `public/images`. Run `bun run images:optimize
 
 Offscreen content fades in once as it approaches the viewport. Content already on screen stays visible during hydration, and images keep their position and size throughout the fade. The hero collage loads eagerly and stays still. Content remains visible without JavaScript, and reduced-motion preferences disable decorative movement. The image script skips unchanged exports; pass `--force` to regenerate them after changing encoder settings.
 
+The homepage word highlight uses a passive scroll listener with one animation-frame update, without an animation-library dependency. The measured LCP hero image uses eager loading and high fetch priority, including the generated preload. Portfolio images describe their actual column widths in `sizes`. Repeated “Learn more” controls include destination-specific accessible text while preserving the visible button labels.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

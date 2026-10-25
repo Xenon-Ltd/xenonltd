@@ -17,7 +17,7 @@ export default function TestimonialCard({
     <div
       className={`bg-[#CCDDEE40] rounded-[6px] border border-zinc-200/50 shadow-xs pt-8 pb-8 px-6 flex flex-col justify-between h-auto ${minHeightClass} w-full`}
     >
-      <span className="text-[24px] font-heading font-bold text-primary-400 leading-none select-none">
+      <span aria-hidden="true" className="text-[24px] font-heading font-bold text-primary-400 leading-none select-none">
         99
       </span>
 
@@ -28,10 +28,10 @@ export default function TestimonialCard({
       <div className="flex items-center gap-3 pt-2">
         <div className="h-10 w-10 rounded-full bg-white border border-zinc-200 shrink-0 select-none" />
         <div>
-          <h5 className="font-sans font-bold text-[12px] leading-[12px] tracking-[0.015em] text-grey-800">
+          <p className="font-sans font-bold text-[12px] leading-[12px] tracking-[0.015em] text-grey-800">
             {authorName}
-          </h5>
-          <p className="font-sans text-[10px] text-grey-500 mt-0.5 leading-none">
+          </p>
+          <p className="font-sans text-[10px] text-grey-600 mt-0.5 leading-none">
             {authorRole}
           </p>
         </div>

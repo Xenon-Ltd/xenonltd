@@ -15,7 +15,8 @@ export default function BaasHero() {
                 src="/images/optimized/baas-hero-bg.webp"
                 alt="Xenon Banking as a Service"
                 fill
-                preload
+                loading="eager"
+                fetchPriority="high"
                 className="object-cover"
                 sizes="(min-width: 1280px) 1200px, calc(100vw - 48px)"
               />

@@ -15,7 +15,8 @@ export default function EscrowHero() {
                 src="/images/optimized/escrow-hero-bg.webp"
                 alt="Xenon Escrow Service"
                 fill
-                preload
+                loading="eager"
+                fetchPriority="high"
                 className="object-cover"
                 sizes="(min-width: 1280px) 1200px, calc(100vw - 48px)"
               />

@@ -17,7 +17,7 @@ export default function PrimaryButton({
 
   const variantStyles =
     variant === "solid"
-      ? "bg-primary-400 text-white hover:bg-success-400 hover:text-[#E9FF1F] transition-colors"
+      ? "bg-primary-400 text-grey-800 hover:bg-success-400 hover:text-[#E9FF1F] transition-colors"
       : "bg-transparent text-primary-400 hover:bg-primary-400/5 cursor-pointer";
 
   return (

@@ -30,7 +30,7 @@ export default function HeroContent() {
 
       <Link
         href="#portfolio"
-        className="hero-cta-reveal group inline-flex h-12 items-center justify-center rounded-full bg-primary-400 px-[22px] font-sans text-base font-medium leading-none text-white transition-[background-color,color,transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:bg-success-400 hover:text-[#E9FF1F] hover:shadow-[0_12px_30px_rgba(15,151,61,0.22)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-400 active:translate-y-0"
+        className="hero-cta-reveal group inline-flex h-12 items-center justify-center rounded-full bg-primary-400 px-[22px] font-sans text-base font-medium leading-none text-grey-800 transition-[background-color,color,transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:bg-success-400 hover:text-[#E9FF1F] hover:shadow-[0_12px_30px_rgba(15,151,61,0.22)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-400 active:translate-y-0"
       >
         Explore Ecosystem
       </Link>

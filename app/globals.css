@@ -86,6 +86,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading), sans-serif;
 }
 
+.scroll-reveal-word {
+  color: var(--grey-500);
+  transition: color 120ms linear;
+}
+
 @keyframes hero-word-reveal {
   from {
     opacity: 0;
@@ -152,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .scroll-reveal-word {
-    color: #ff6233 !important;
+    color: #e84d1c !important;
   }
 
   *, *::before, *::after {

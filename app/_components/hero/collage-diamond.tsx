@@ -5,7 +5,7 @@ interface CollageDiamondProps {
   alt: string;
   className?: string;
   gradient: string;
-  preload?: boolean;
+  highPriority?: boolean;
 }
 
 export default function CollageDiamond({
@@ -13,7 +13,7 @@ export default function CollageDiamond({
   alt,
   className = "",
   gradient,
-  preload = false,
+  highPriority = false,
 }: CollageDiamondProps) {
   return (
     <div
@@ -32,8 +32,8 @@ export default function CollageDiamond({
                 fill
                 sizes="(max-width: 639px) 44vw, (max-width: 1023px) 34vw, 350px"
                 className="object-cover"
-                preload={preload}
-                loading={preload ? undefined : "eager"}
+                loading="eager"
+                fetchPriority={highPriority ? "high" : "auto"}
               />
             </div>
           </div>

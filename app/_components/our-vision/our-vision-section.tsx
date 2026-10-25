@@ -56,7 +56,7 @@ export default function OurVisionSection() {
                   <p className="font-heading text-2xl md:text-[32px] font-extrabold text-white leading-8">
                     18 Countries +
                   </p>
-                  <p className="font-sans text-base md:text-xl text-white/90">
+                  <p className="font-sans text-base md:text-xl text-grey-800">
                     Syka Expansion Footprint · Growing to 54 African Nations
                   </p>
                 </div>

@@ -123,10 +123,10 @@ export default function AdvantageSection() {
               <div className="rounded-2xl bg-primary-400 h-[123px] p-6 flex items-center gap-4">
                 <div className="h-12 w-12 rounded-md bg-white/20 shrink-0" />
                 <div className="space-y-1">
-                  <p className="font-sans text-sm text-white/90">
+                  <p className="font-sans text-sm text-grey-800">
                     A holding company with portfolio companies and services.
                   </p>
-                  <h3 className="font-heading text-base font-bold text-white tracking-tight">
+                  <h3 className="font-heading text-base font-bold text-grey-800 tracking-tight">
                     Portfolio Approach
                   </h3>
                 </div>

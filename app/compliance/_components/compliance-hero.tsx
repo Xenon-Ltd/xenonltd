@@ -15,7 +15,8 @@ export default function ComplianceHero() {
                 src="/images/optimized/compliance-hero-bg.webp"
                 alt="Compliance & Infrastructure"
                 fill
-                preload
+                loading="eager"
+                fetchPriority="high"
                 className="object-cover"
                 sizes="(min-width: 1280px) 1200px, calc(100vw - 48px)"
               />

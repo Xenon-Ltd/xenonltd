@@ -12,7 +12,8 @@ export default function SykaHeroSection() {
             fill
             className="object-cover"
             sizes="(min-width: 1280px) 1200px, calc(100vw - 48px)"
-            preload
+            loading="eager"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-black/20" />
           <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-white/20 backdrop-blur-[2px] lg:backdrop-blur-[4px]" />

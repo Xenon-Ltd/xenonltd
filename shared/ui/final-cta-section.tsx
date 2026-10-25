@@ -64,7 +64,7 @@ export default function FinalCtaSection({
             {/* CTA Button */}
             <Link
               href="/contact"
-              className="inline-flex h-12 items-center justify-center rounded-full bg-primary-400 px-6 font-sans text-base font-medium text-white transition-[background-color,color,transform] hover:-translate-y-0.5 hover:bg-success-400 hover:text-[#E9FF1F] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              className="inline-flex h-12 items-center justify-center rounded-full bg-primary-400 px-6 font-sans text-base font-medium text-grey-800 transition-[background-color,color,transform] hover:-translate-y-0.5 hover:bg-success-400 hover:text-[#E9FF1F] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
               {displayCtaText}
             </Link>

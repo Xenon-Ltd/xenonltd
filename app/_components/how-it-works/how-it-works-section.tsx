@@ -34,9 +34,10 @@ export default function HowItWorksSection() {
           </h2>
           <Link
             href="/about"
-            className="mt-2 inline-flex h-12 w-fit items-center justify-center rounded-full bg-primary-400 px-6 font-sans text-base font-medium text-white transition-[background-color,color,transform] hover:-translate-y-0.5 hover:bg-success-400 hover:text-[#E9FF1F] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-400"
+            aria-label="Learn more about Xenon's infrastructure"
+            className="mt-2 inline-flex h-12 w-fit items-center justify-center rounded-full bg-primary-400 px-6 font-sans text-base font-medium text-grey-800 transition-[background-color,color,transform] hover:-translate-y-0.5 hover:bg-success-400 hover:text-[#E9FF1F] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-400"
           >
-            Learn more
+            Learn more<span className="sr-only"> about Xenon&apos;s infrastructure</span>
           </Link>
         </Reveal>
 

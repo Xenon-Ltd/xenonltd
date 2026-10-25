@@ -38,14 +38,15 @@ export default function PortfolioCard({
             alt={imageAlt}
             fill
             className={`${imageFit === "contain" ? "object-contain" : "object-cover"} transition-all duration-500 group-hover:scale-[1.015] group-hover:brightness-90`}
-            sizes="(min-width: 1024px) 515px, (min-width: 768px) 44vw, 100vw"
+            sizes="(min-width: 1280px) 515px, (min-width: 1024px) calc((100vw - 152px) / 2), (min-width: 768px) calc((100vw - 96px) / 2), (min-width: 640px) calc(100vw - 64px), calc(100vw - 48px)"
           />
           {href ? (
             <Link
               href={href}
-              className="absolute bottom-[clamp(1.5rem,7.8vw,2.5rem)] left-[clamp(1.5rem,7.8%,2.5rem)] inline-flex h-10 w-[clamp(116px,28.75%,148px)] items-center justify-center rounded-full bg-primary-400 px-4 font-sans text-sm font-medium text-white transition-[background-color,color,transform] hover:-translate-y-0.5 hover:bg-success-400 hover:text-[#E9FF1F] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:h-12 md:px-0 md:text-base"
+              aria-label={`Learn more about ${title}`}
+              className="absolute bottom-[clamp(1.5rem,7.8vw,2.5rem)] left-[clamp(1.5rem,7.8%,2.5rem)] inline-flex h-10 w-[clamp(116px,28.75%,148px)] items-center justify-center rounded-full bg-primary-400 px-4 font-sans text-sm font-medium text-grey-800 transition-[background-color,color,transform] hover:-translate-y-0.5 hover:bg-success-400 hover:text-[#E9FF1F] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:h-12 md:px-0 md:text-base"
             >
-              Learn more
+              Learn more<span className="sr-only"> about {title}</span>
             </Link>
           ) : (
             <PrimaryButton className="absolute bottom-[clamp(1.5rem,7.8vw,2.5rem)] left-[clamp(1.5rem,7.8%,2.5rem)] h-10 w-[clamp(116px,28.75%,148px)] px-4 py-0 text-sm md:h-12 md:px-0 md:text-base">
@@ -62,7 +63,7 @@ export default function PortfolioCard({
             {tag}
           </span>
         </div>
-        <h4 className="text-xl md:text-2xl font-heading font-bold text-grey-800 leading-snug tracking-tight">
+        <h3 className="text-xl md:text-2xl font-heading font-bold text-grey-800 leading-snug tracking-tight">
           {href ? (
             <Link href={href} className="hover:text-primary-400 transition-colors">
               {title}
@@ -70,7 +71,7 @@ export default function PortfolioCard({
           ) : (
             title
           )}
-        </h4>
+        </h3>
       </div>
     </div>
   );
