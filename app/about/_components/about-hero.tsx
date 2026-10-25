@@ -1,7 +1,7 @@
 import React from "react";
-import Image from "next/image";
 import Navbar from "@/app/_components/navbar";
 import Container from "@/shared/ui/container";
+import AboutHeroCollage from "./about-hero-collage";
 
 export default function AboutHero() {
   return (
@@ -23,141 +23,7 @@ export default function AboutHero() {
         </Container>
       </div>
 
-      {/* 6-Image Collage Grid */}
-      <div className="pb-16">
-        <Container>
-          <div className="bg-white rounded-3xl p-6 border border-black/5 shadow-xs w-full max-w-7xl mx-auto">
-            {/* Desktop Collage Layout (Figma ratios 11:24:11 and 1:1:1, gaps 24px) */}
-            <div className="hidden lg:flex flex-col gap-6 w-full select-none">
-              {/* Row 1 */}
-              <div className="grid grid-cols-[11fr_24fr_11fr] gap-6 h-[272px] w-full">
-                {/* Image 1 */}
-                <div className="relative rounded-xl overflow-hidden shadow-sm h-full">
-                  <Image
-                    src="/images/optimized/about-hero-1.webp"
-                    alt="Xenon team workspace"
-                    fill
-                    className="object-cover"
-                    sizes="264px"
-                  />
-                </div>
-                {/* Image 2 */}
-                <div className="relative rounded-xl overflow-hidden shadow-sm h-full">
-                  <Image
-                    src="/images/optimized/about-hero-2.webp"
-                    alt="Financial systems graph"
-                    fill
-                    className="object-cover"
-                    sizes="576px"
-                  />
-                </div>
-                {/* Image 3 */}
-                <div className="relative rounded-xl overflow-hidden shadow-sm h-full">
-                  <Image
-                    src="/images/optimized/about-hero-3.webp"
-                    alt="Collaboration meeting"
-                    fill
-                    className="object-cover"
-                    sizes="264px"
-                  />
-                </div>
-              </div>
-
-              {/* Row 2 */}
-              <div className="grid grid-cols-3 gap-6 h-[272px] w-full">
-                {/* Image 4 */}
-                <div className="relative rounded-xl overflow-hidden shadow-sm h-full">
-                  <Image
-                    src="/images/optimized/about-hero-4.webp"
-                    alt="African trading environment"
-                    fill
-                    className="object-cover"
-                    sizes="368px"
-                  />
-                </div>
-                {/* Image 5 */}
-                <div className="relative rounded-xl overflow-hidden shadow-sm h-full">
-                  <Image
-                    src="/images/optimized/about-hero-5.webp"
-                    alt="Mobile finance transaction"
-                    fill
-                    className="object-cover"
-                    sizes="368px"
-                  />
-                </div>
-                {/* Image 6 */}
-                <div className="relative rounded-xl overflow-hidden shadow-sm h-full">
-                  <Image
-                    src="/images/optimized/about-hero-6.webp"
-                    alt="Regulatory documentation work"
-                    fill
-                    className="object-cover"
-                    sizes="368px"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Mobile/Tablet Responsive Grid Layout */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:hidden">
-              <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
-                <Image
-                  src="/images/optimized/about-hero-1.webp"
-                  alt=""
-                  fill
-                  sizes="(min-width: 1024px) 0px, (min-width: 768px) 28vw, (min-width: 640px) 42vw, calc(100vw - 96px)"
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative aspect-[16/9] sm:col-span-2 rounded-xl overflow-hidden shadow-sm">
-                <Image
-                  src="/images/optimized/about-hero-2.webp"
-                  alt=""
-                  fill
-                  sizes="(min-width: 1024px) 0px, (min-width: 768px) 58vw, calc(100vw - 96px)"
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
-                <Image
-                  src="/images/optimized/about-hero-3.webp"
-                  alt=""
-                  fill
-                  sizes="(min-width: 1024px) 0px, (min-width: 768px) 28vw, (min-width: 640px) 42vw, calc(100vw - 96px)"
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
-                <Image
-                  src="/images/optimized/about-hero-4.webp"
-                  alt=""
-                  fill
-                  sizes="(min-width: 1024px) 0px, (min-width: 768px) 28vw, (min-width: 640px) 42vw, calc(100vw - 96px)"
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
-                <Image
-                  src="/images/optimized/about-hero-5.webp"
-                  alt=""
-                  fill
-                  sizes="(min-width: 1024px) 0px, (min-width: 768px) 28vw, (min-width: 640px) 42vw, calc(100vw - 96px)"
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
-                <Image
-                  src="/images/optimized/about-hero-6.webp"
-                  alt=""
-                  fill
-                  sizes="(min-width: 1024px) 0px, (min-width: 768px) 28vw, (min-width: 640px) 42vw, calc(100vw - 96px)"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </Container>
-      </div>
+      <AboutHeroCollage />
     </div>
   );
 }

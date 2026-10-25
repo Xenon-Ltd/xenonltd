@@ -24,7 +24,7 @@ export default function AboutAdvantage() {
             &ldquo;We don&apos;t build competing fintech products. We build
             infrastructure that empowers financial institutions to compete.&rdquo;
           </p>
-          <p className="font-sans text-sm sm:text-base text-white/80 select-none font-medium">
+          <p className="font-sans text-sm sm:text-base text-grey-800 select-none font-medium">
             &mdash; Xenon Technologies Inc.
           </p>
         </div>

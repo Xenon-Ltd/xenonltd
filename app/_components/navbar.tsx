@@ -25,7 +25,7 @@ export default function Navbar({ showCta = false }: NavbarProps) {
           <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex lg:flex-1">
-            <Link href="/" className="-m-1.5 p-1.5" aria-label="Xenon Home">
+            <Link href="/" prefetch={false} className="-m-1.5 p-1.5" aria-label="Xenon Home">
               <Logo />
             </Link>
           </div>
@@ -92,6 +92,7 @@ export default function Navbar({ showCta = false }: NavbarProps) {
 
             <Link
               href="/contact"
+              prefetch={false}
               className="font-sans text-base font-medium text-zinc-600 hover:text-black transition-colors duration-200 py-2"
             >
               Contact
@@ -101,7 +102,7 @@ export default function Navbar({ showCta = false }: NavbarProps) {
           {/* Desktop Right Spacer (keeps links centered in visual alignment) */}
           <div className="hidden md:flex md:flex-1 md:justify-end">
             {showCta && (
-              <Link href="/contact">
+              <Link href="/contact" prefetch={false}>
                 <PrimaryButton className="text-sm py-2 px-5">
                   Schedule Consultation
                 </PrimaryButton>
