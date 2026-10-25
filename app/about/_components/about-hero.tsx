@@ -34,7 +34,7 @@ export default function AboutHero() {
                 {/* Image 1 */}
                 <div className="relative rounded-xl overflow-hidden shadow-sm h-full">
                   <Image
-                    src="/images/about-hero-1.png"
+                    src="/images/optimized/about-hero-1.webp"
                     alt="Xenon team workspace"
                     fill
                     className="object-cover"
@@ -44,7 +44,7 @@ export default function AboutHero() {
                 {/* Image 2 */}
                 <div className="relative rounded-xl overflow-hidden shadow-sm h-full">
                   <Image
-                    src="/images/about-hero-2.png"
+                    src="/images/optimized/about-hero-2.webp"
                     alt="Financial systems graph"
                     fill
                     className="object-cover"
@@ -54,7 +54,7 @@ export default function AboutHero() {
                 {/* Image 3 */}
                 <div className="relative rounded-xl overflow-hidden shadow-sm h-full">
                   <Image
-                    src="/images/about-hero-3.png"
+                    src="/images/optimized/about-hero-3.webp"
                     alt="Collaboration meeting"
                     fill
                     className="object-cover"
@@ -68,7 +68,7 @@ export default function AboutHero() {
                 {/* Image 4 */}
                 <div className="relative rounded-xl overflow-hidden shadow-sm h-full">
                   <Image
-                    src="/images/about-hero-4.png"
+                    src="/images/optimized/about-hero-4.webp"
                     alt="African trading environment"
                     fill
                     className="object-cover"
@@ -78,7 +78,7 @@ export default function AboutHero() {
                 {/* Image 5 */}
                 <div className="relative rounded-xl overflow-hidden shadow-sm h-full">
                   <Image
-                    src="/images/about-hero-5.png"
+                    src="/images/optimized/about-hero-5.webp"
                     alt="Mobile finance transaction"
                     fill
                     className="object-cover"
@@ -88,7 +88,7 @@ export default function AboutHero() {
                 {/* Image 6 */}
                 <div className="relative rounded-xl overflow-hidden shadow-sm h-full">
                   <Image
-                    src="/images/about-hero-6.png"
+                    src="/images/optimized/about-hero-6.webp"
                     alt="Regulatory documentation work"
                     fill
                     className="object-cover"
@@ -102,49 +102,55 @@ export default function AboutHero() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:hidden">
               <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
                 <Image
-                  src="/images/about-hero-1.png"
+                  src="/images/optimized/about-hero-1.webp"
                   alt=""
                   fill
+                  sizes="(min-width: 1024px) 0px, (min-width: 768px) 28vw, (min-width: 640px) 42vw, calc(100vw - 96px)"
                   className="object-cover"
                 />
               </div>
               <div className="relative aspect-[16/9] sm:col-span-2 rounded-xl overflow-hidden shadow-sm">
                 <Image
-                  src="/images/about-hero-2.png"
+                  src="/images/optimized/about-hero-2.webp"
                   alt=""
                   fill
+                  sizes="(min-width: 1024px) 0px, (min-width: 768px) 58vw, calc(100vw - 96px)"
                   className="object-cover"
                 />
               </div>
               <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
                 <Image
-                  src="/images/about-hero-3.png"
+                  src="/images/optimized/about-hero-3.webp"
                   alt=""
                   fill
+                  sizes="(min-width: 1024px) 0px, (min-width: 768px) 28vw, (min-width: 640px) 42vw, calc(100vw - 96px)"
                   className="object-cover"
                 />
               </div>
               <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
                 <Image
-                  src="/images/about-hero-4.png"
+                  src="/images/optimized/about-hero-4.webp"
                   alt=""
                   fill
+                  sizes="(min-width: 1024px) 0px, (min-width: 768px) 28vw, (min-width: 640px) 42vw, calc(100vw - 96px)"
                   className="object-cover"
                 />
               </div>
               <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
                 <Image
-                  src="/images/about-hero-5.png"
+                  src="/images/optimized/about-hero-5.webp"
                   alt=""
                   fill
+                  sizes="(min-width: 1024px) 0px, (min-width: 768px) 28vw, (min-width: 640px) 42vw, calc(100vw - 96px)"
                   className="object-cover"
                 />
               </div>
               <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
                 <Image
-                  src="/images/about-hero-6.png"
+                  src="/images/optimized/about-hero-6.webp"
                   alt=""
                   fill
+                  sizes="(min-width: 1024px) 0px, (min-width: 768px) 28vw, (min-width: 640px) 42vw, calc(100vw - 96px)"
                   className="object-cover"
                 />
               </div>

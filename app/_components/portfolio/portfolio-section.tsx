@@ -20,7 +20,7 @@ export default function PortfolioSection() {
               <PortfolioCard
                 tag="Core Systems"
                 title="Banking System as a Service"
-                imageSrc="/images/portfolio-feature-2.png"
+                imageSrc="/images/optimized/portfolio-feature-2.webp"
                 imageAlt="Banking System as a Service"
                 aspectRatio="tall"
                 href="/banking"
@@ -30,7 +30,7 @@ export default function PortfolioSection() {
               <PortfolioCard
                 tag="Foundation Layer"
                 title="Compliance & Financial Infrastructure"
-                imageSrc="/images/portfolio-feature-4.png"
+                imageSrc="/images/optimized/portfolio-feature-4.webp"
                 imageAlt="Compliance & Financial Infrastructure"
                 aspectRatio="square"
                 imageFit="contain"
@@ -52,7 +52,7 @@ export default function PortfolioSection() {
               <PortfolioCard
                 tag="Subsidiary Company"
                 title="Syka: Cross-Border Payments, Proven at Scale"
-                imageSrc="/images/portfolio-feature-1.png"
+                imageSrc="/images/optimized/portfolio-feature-1.webp"
                 imageAlt="Syka Cross-Border Payments"
                 aspectRatio="square"
                 href="/syka"
@@ -70,7 +70,7 @@ export default function PortfolioSection() {
               <PortfolioCard
                 tag="Escrow"
                 title="Escrow Service: Programmable Transaction Security"
-                imageSrc="/images/portfolio-feature-3.png"
+                imageSrc="/images/optimized/portfolio-feature-3.webp"
                 imageAlt="Escrow Service"
                 aspectRatio="tall"
                 href="/escrow"

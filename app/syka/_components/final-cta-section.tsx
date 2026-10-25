@@ -7,7 +7,7 @@ export default function FinalCtaSection() {
     <section className="relative w-full">
       <div className="absolute inset-0">
         <Image
-          src="/images/final-cta-bg.png"
+          src="/images/optimized/final-cta-bg.webp"
           alt=""
           fill
           className="object-cover"

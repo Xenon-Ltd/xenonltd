@@ -1,3 +1,6 @@
+import { sitePages } from "@/shared/config/site";
+import createPageMetadata from "@/shared/lib/create-page-metadata";
+import SiteStructuredData from "./_components/site-structured-data";
 import HeroSection from "./_components/hero/hero-section";
 import WhoWeAreSection from "./_components/who-we-are/who-we-are-section";
 import MissionVisionSection from "./_components/mission-vision-section/mission-vision-section";
@@ -9,9 +12,12 @@ import WhyXenonSection from "./_components/why-xenon/why-xenon-section";
 import FinalCtaSection from "@/shared/ui/final-cta-section";
 import FooterSection from "./_components/footer/footer-section";
 
+export const metadata = createPageMetadata(sitePages.home);
+
 export default function Home() {
   return (
     <div className="bg-background">
+      <SiteStructuredData />
       <main>
         <HeroSection />
         <WhoWeAreSection />

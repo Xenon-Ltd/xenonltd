@@ -12,10 +12,10 @@ export default function EscrowHero() {
           <div className="relative flex min-h-[340px] w-full items-center overflow-hidden rounded-3xl shadow-md sm:min-h-[400px] md:min-h-[460px] lg:min-h-[500px]">
             <div className="absolute inset-0 z-0">
               <Image
-                src="/images/escrow-hero-bg.png"
+                src="/images/optimized/escrow-hero-bg.webp"
                 alt="Xenon Escrow Service"
                 fill
-                priority
+                preload
                 className="object-cover"
                 sizes="(min-width: 1280px) 1200px, calc(100vw - 48px)"
               />

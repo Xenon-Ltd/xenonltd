@@ -86,7 +86,7 @@ export default function AdvantageSection() {
                 </div>
                 <div className="relative flex-1 min-h-0">
                   <Image
-                    src="/images/advantage-institutional-grade.png"
+                    src="/images/optimized/advantage-institutional-grade.webp"
                     alt="Institutional grade infrastructure"
                     fill
                     className="object-cover"
@@ -110,7 +110,7 @@ export default function AdvantageSection() {
                 </div>
                 <div className="relative flex-1 min-h-0 rounded-xl overflow-hidden">
                   <Image
-                    src="/images/advantage-stablecoin-native.png"
+                    src="/images/optimized/advantage-stablecoin-native.webp"
                     alt="Stablecoin-native infrastructure"
                     fill
                     className="object-cover"
@@ -190,7 +190,7 @@ export default function AdvantageSection() {
               {/* Africa First */}
               <div className="rounded-2xl h-[359px] relative overflow-hidden">
                 <Image
-                  src="/images/advantage-africa-first.png"
+                  src="/images/optimized/advantage-africa-first.webp"
                   alt="Africa first, Africa deep"
                   fill
                   className="object-cover"

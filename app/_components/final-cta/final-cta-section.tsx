@@ -18,10 +18,9 @@ export default function FinalCtaSection({
       {/* Background Image & Overlays */}
       <div className="absolute top-20 md:top-32 bottom-0 left-0 right-0 z-0">
         <Image
-          src="/images/final-cta-bg.png"
+          src="/images/optimized/final-cta-bg.webp"
           alt=""
           fill
-          priority
           className="object-cover"
           sizes="100vw"
           aria-hidden="true"

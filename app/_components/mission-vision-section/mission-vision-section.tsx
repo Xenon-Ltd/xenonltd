@@ -13,13 +13,12 @@ export default function MissionVisionSection() {
           <Reveal className="flex min-w-0 flex-col gap-6">
             <div className="relative aspect-[544/546] w-full overflow-hidden rounded-3xl">
               <Image
-                src="/images/mission-card-figma.png"
+                src="/images/optimized/mission.webp"
                 alt="A bank surrounded by international currency symbols"
                 fill
                 className="object-fill"
                 sizes="(min-width: 1280px) 544px, (min-width: 768px) calc(50vw - 96px), calc(100vw - 48px)"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-transparent from-[8%] to-white/20 backdrop-blur-[10px] md:backdrop-blur-[20px]" />
             </div>
             <h3 className="font-heading text-xl font-bold leading-[1.2] tracking-[0.015em] text-grey-800 md:text-[28px]">
               Empowering banks with infrastructure
@@ -29,13 +28,12 @@ export default function MissionVisionSection() {
           <Reveal className="flex min-w-0 flex-col gap-6" delay={140}>
             <div className="relative aspect-[544/546] w-full overflow-hidden rounded-3xl">
               <Image
-                src="/images/vision-card-figma-357b82.png"
+                src="/images/optimized/vission.webp"
                 alt="A connected digital map of Africa"
                 fill
                 className="object-fill"
                 sizes="(min-width: 1280px) 544px, (min-width: 768px) calc(50vw - 96px), calc(100vw - 48px)"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-transparent from-[8%] to-white/20 backdrop-blur-[10px] md:backdrop-blur-[20px]" />
             </div>
             <h3 className="font-heading text-xl font-bold leading-[1.2] tracking-[0.015em] text-grey-800 md:text-[28px]">
               Transforming Africa&apos;s financial services

@@ -1,13 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import {
-  motion,
-  useReducedMotion,
-  useScroll,
-  useSpring,
-  useTransform,
-} from "motion/react";
+import { useScroll, useSpring } from "motion/react";
 import Container from "@/shared/ui/container";
 import ScrollRevealWord from "./scroll-reveal-word";
 
@@ -18,7 +12,6 @@ const statementWords = statement.split(" ");
 
 export default function WhoWeAreSection() {
   const sectionRef = useRef<HTMLElement>(null);
-  const reducedMotion = useReducedMotion();
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start 82%", "end 32%"],
@@ -28,8 +21,6 @@ export default function WhoWeAreSection() {
     damping: 28,
     mass: 0.25,
   });
-  const textY = useTransform(smoothProgress, [0, 1], [24, -12]);
-  const textScale = useTransform(smoothProgress, [0, 1], [0.975, 1]);
 
   return (
     <section
@@ -40,17 +31,9 @@ export default function WhoWeAreSection() {
     >
       <div className="flex min-h-[92svh] items-center overflow-hidden py-20 md:sticky md:top-0 md:h-svh md:min-h-0 md:py-16">
         <Container>
-          <motion.div
+          <div
             aria-hidden="true"
             className="mx-auto max-w-[1000px] text-center"
-            style={
-              reducedMotion
-                ? undefined
-                : {
-                    y: textY,
-                    scale: textScale,
-                  }
-            }
           >
             <p className="font-heading text-[clamp(1.65rem,7.2vw,2.15rem)] font-bold leading-[1.18] tracking-[-0.025em] text-grey-500 sm:text-[clamp(2rem,5.4vw,2.5rem)] md:text-[clamp(2.35rem,3.35vw,2.65rem)] md:leading-[1.14]">
               {statementWords.map((word, index) => (
@@ -64,7 +47,7 @@ export default function WhoWeAreSection() {
                 </ScrollRevealWord>
               ))}
             </p>
-          </motion.div>
+          </div>
         </Container>
       </div>
     </section>

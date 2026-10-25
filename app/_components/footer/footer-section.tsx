@@ -64,7 +64,7 @@ export default function FooterSection() {
         aria-hidden="true"
       >
         <Image
-          src="/images/footer-background-3b5c4e.png"
+          src="/images/optimized/footer-background-3b5c4e.webp"
           alt=""
           fill
           className="object-fill object-bottom"

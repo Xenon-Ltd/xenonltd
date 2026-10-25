@@ -7,12 +7,12 @@ export default function SykaHeroSection() {
       <Container style={{ paddingInline: "clamp(24px, 3.125vw, 40px)" }}>
         <div className="relative min-h-[340px] w-full overflow-hidden rounded-3xl sm:min-h-[380px] md:min-h-[440px] lg:min-h-[542px]">
           <Image
-            src="/images/syka-editorial-hero.png"
+            src="/images/optimized/syka-editorial-hero.webp"
             alt="Syka cross-border payments platform"
             fill
             className="object-cover"
             sizes="(min-width: 1280px) 1200px, calc(100vw - 48px)"
-            priority
+            preload
           />
           <div className="absolute inset-0 bg-black/20" />
           <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-white/20 backdrop-blur-[2px] lg:backdrop-blur-[4px]" />

@@ -1,14 +1,7 @@
 "use client";
 
-import { useRef } from "react";
-import type { ReactNode } from "react";
-import {
-  motion,
-  useReducedMotion,
-  useScroll,
-  useSpring,
-  useTransform,
-} from "motion/react";
+import { useEffect, useRef } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 interface RevealProps {
   children: ReactNode;
@@ -20,43 +13,50 @@ interface RevealProps {
 
 export default function Reveal({ children, className, delay = 0 }: RevealProps) {
   const elementRef = useRef<HTMLDivElement>(null);
-  const reducedMotion = useReducedMotion();
-  const { scrollYProgress } = useScroll({
-    target: elementRef,
-    offset: ["start 94%", "start 62%"],
-  });
-  const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 125,
-    damping: 30,
-    mass: 0.22,
-  });
-  const stagger = Math.min(delay / 1000, 0.24);
-  const revealEnd = Math.min(0.68 + stagger, 1);
-  const opacity = useTransform(smoothProgress, [stagger, revealEnd], [0, 1]);
-  const y = useTransform(smoothProgress, [stagger, revealEnd], [30, 0]);
-  const scale = useTransform(smoothProgress, [stagger, revealEnd], [0.985, 1]);
-  const filter = useTransform(
-    smoothProgress,
-    [stagger, revealEnd],
-    ["blur(8px)", "blur(0px)"],
-  );
+  useEffect(() => {
+    const element = elementRef.current;
+    if (
+      !element ||
+      !("IntersectionObserver" in window) ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      return;
+    }
+
+    // Never hide content that has already appeared on screen during hydration.
+    if (element.getBoundingClientRect().top <= window.innerHeight + 48) {
+      return;
+    }
+
+    element.dataset.revealState = "pending";
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          element.dataset.revealState = "revealed";
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "0px 0px 48px 0px", threshold: 0 },
+    );
+
+    observer.observe(element);
+
+    return () => {
+      observer.disconnect();
+      delete element.dataset.revealState;
+    };
+  }, []);
 
   return (
-    <motion.div
+    <div
       ref={elementRef}
       className={className}
       style={
-        reducedMotion
-          ? undefined
-          : {
-              filter,
-              opacity,
-              scale,
-              y,
-            }
+        { "--reveal-delay": `${Math.min(Math.max(delay, 0), 120)}ms` } as CSSProperties
       }
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

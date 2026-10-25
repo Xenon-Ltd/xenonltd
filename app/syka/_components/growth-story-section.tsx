@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Container from "@/shared/ui/container";
 import SectionTag from "@/shared/ui/section-tag";
 import PrimaryButton from "@/shared/ui/primary-button";
 
@@ -18,7 +17,7 @@ export default function GrowthStorySection() {
           {/* Left: Image */}
           <div className="relative aspect-square w-full max-w-xl mx-auto lg:mx-0 lg:-ml-16 xl:-ml-24">
             <Image
-              src="/images/syka-growth-story.png"
+              src="/images/optimized/syka-growth-story.webp"
               alt="Syka growth story map"
               fill
               className="object-contain"

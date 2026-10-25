@@ -12,10 +12,10 @@ export default function BaasHero() {
           <div className="relative flex min-h-[340px] w-full items-center overflow-hidden rounded-3xl shadow-md sm:min-h-[400px] md:min-h-[460px] lg:min-h-[500px]">
             <div className="absolute inset-0 z-0">
               <Image
-                src="/images/baas-hero-bg.png"
+                src="/images/optimized/baas-hero-bg.webp"
                 alt="Xenon Banking as a Service"
                 fill
-                priority
+                preload
                 className="object-cover"
                 sizes="(min-width: 1280px) 1200px, calc(100vw - 48px)"
               />

@@ -18,7 +18,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project self-hosts Syne and IBM Plex Sans with `next/font`, preserving the Figma typography without browser requests to Google Fonts.
+
+## SEO and image delivery
+
+Page titles, descriptions, canonical paths and the production domain live in `shared/config/site.ts`. The same route list generates `/sitemap.xml`; `/robots.txt` points crawlers to it. Update that configuration when adding a public page. Organization and WebSite structured data are rendered on the homepage.
+
+Keep original Figma PNG exports in `public/images`. Run `bun run images:optimize` to generate WebP delivery assets in `public/images/optimized`, then reference those assets in components. The script processes referenced PNGs above 100 KB, preserves transparency and aspect ratio, and caps dimensions at 2400 pixels. It also reports missing sources. Next.js serves responsive AVIF/WebP variants; always provide accurate `sizes` for `fill` images. Only preload an image needed above the fold.
+
+Offscreen content fades in once as it approaches the viewport. Content already on screen stays visible during hydration, and images keep their position and size throughout the fade. The hero collage loads eagerly and stays still. Content remains visible without JavaScript, and reduced-motion preferences disable decorative movement. The image script skips unchanged exports; pass `--force` to regenerate them after changing encoder settings.
 
 ## Learn More
 

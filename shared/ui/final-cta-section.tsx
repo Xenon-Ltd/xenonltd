@@ -30,7 +30,7 @@ export default function FinalCtaSection({
       {/* Background Image & Overlays */}
       <div className={`absolute bottom-0 left-0 right-0 z-0 ${empty ? "top-0" : "top-20 md:top-32"}`}>
         <Image
-          src="/images/final-cta-bg.png"
+          src="/images/optimized/final-cta-bg.webp"
           alt=""
           fill
           className="object-cover"

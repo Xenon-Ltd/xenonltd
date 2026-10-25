@@ -101,32 +101,34 @@ export default function WhySection({
         </Reveal>
 
         {/* RIGHT COLUMN: Endless Dual-Column Opposite Marquee Grid */}
-        <div className="relative group cursor-pointer max-h-[580px] md:max-h-[640px] overflow-hidden rounded-2xl [mask-image:linear-gradient(to_bottom,transparent,black_8%,black_92%,transparent)]">
+        <div tabIndex={0} role="region" aria-label="Customer testimonials. Focus here to pause scrolling." className="relative group max-h-[580px] md:max-h-[640px] overflow-hidden rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-400 [mask-image:linear-gradient(to_bottom,transparent,black_8%,black_92%,transparent)]">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start">
 
             {/* Sub-Column 1: Moving UP continuously */}
-            <div className="flex flex-col space-y-6 animate-marquee-up">
+            <div className="flex flex-col gap-6 pb-6 animate-marquee-up">
               {col1Cards.map((card, index) => (
+                <div key={`col1-${index}`} aria-hidden={index >= 2 ? true : undefined}>
                 <TestimonialCard
-                  key={`col1-${index}`}
                   quote={card.quote}
                   authorName={card.authorName}
                   authorRole={card.authorRole}
                   minHeightClass="md:min-h-[280px]"
                 />
+                </div>
               ))}
             </div>
 
             {/* Sub-Column 2: Moving DOWN continuously */}
-            <div className="flex flex-col space-y-6 animate-marquee-down">
+            <div className="flex flex-col gap-6 pb-6 animate-marquee-down">
               {col2Cards.map((card, index) => (
+                <div key={`col2-${index}`} aria-hidden={index >= 2 ? true : undefined}>
                 <TestimonialCard
-                  key={`col2-${index}`}
                   quote={card.quote}
                   authorName={card.authorName}
                   authorRole={card.authorRole}
                   minHeightClass="md:min-h-[280px]"
                 />
+                </div>
               ))}
             </div>
 

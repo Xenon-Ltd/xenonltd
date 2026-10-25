@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=Syne:wght@400..800&display=swap');
 @import "tailwindcss";
 
 :root {
-  --font-heading: 'Syne', sans-serif;
-  --font-paragraph: 'IBM Plex Sans', sans-serif;
+  --font-heading: var(--font-syne), sans-serif;
+  --font-paragraph: var(--font-ibm-plex-sans), sans-serif;
   --background: #F9F4F1;
   --foreground: #171717;
 
@@ -41,7 +40,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-paragraph);
-  --font-heading: var(--font-heading);
+  --font-heading: var(--font-syne), sans-serif;
 
   --color-shade-white: var(--shade-white);
   --color-shade-black: var(--shade-black);
@@ -90,36 +89,51 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes hero-word-reveal {
   from {
     opacity: 0;
-    transform: translate3d(0, 0.72em, 0);
+    transform: translateY(0.18em);
   }
   to {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    transform: translateY(0);
   }
 }
 
 @keyframes hero-copy-reveal {
   from {
     opacity: 0;
-    transform: translate3d(0, 18px, 0);
+    transform: translateY(6px);
   }
   to {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    transform: translateY(0);
   }
 }
 
 .hero-word-reveal > span {
-  animation: hero-word-reveal 800ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: hero-word-reveal 850ms cubic-bezier(0.22, 1, 0.36, 1) both;
   animation-delay: inherit;
 }
 
 .hero-copy-reveal {
-  animation: hero-copy-reveal 900ms 480ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: hero-copy-reveal 750ms 180ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .hero-cta-reveal {
-  animation: hero-copy-reveal 900ms 610ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: hero-copy-reveal 750ms 260ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Only offscreen content is prepared for a fade; image geometry stays fixed. */
+[data-reveal-state="pending"] {
+  opacity: 0;
+}
+
+[data-reveal-state="revealed"] {
+  opacity: 1;
+  transition: opacity 800ms cubic-bezier(0.25, 0.1, 0.25, 1) var(--reveal-delay, 0ms);
+}
+
+[data-reveal-state]:focus-within {
+  opacity: 1;
+  transition: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -129,11 +143,20 @@ h1, h2, h3, h4, h5, h6 {
 
   .hero-word-reveal > span,
   .hero-copy-reveal,
-  .hero-cta-reveal {
+  .hero-cta-reveal,
+  [data-reveal-state] {
     animation: none;
     filter: none;
     opacity: 1;
     transform: none;
+  }
+
+  .scroll-reveal-word {
+    color: #ff6233 !important;
+  }
+
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
   }
 }
 
@@ -157,14 +180,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .animate-marquee-up {
-  animation: marquee-up 28s linear infinite;
+  animation: marquee-up 42s linear infinite;
 }
 
 .animate-marquee-down {
-  animation: marquee-down 28s linear infinite;
+  animation: marquee-down 42s linear infinite;
 }
 
 .group:hover .animate-marquee-up,
-.group:hover .animate-marquee-down {
+.group:hover .animate-marquee-down,
+.group:focus-within .animate-marquee-up,
+.group:focus-within .animate-marquee-down {
   animation-play-state: paused !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-up,
+  .animate-marquee-down {
+    animation: none;
+    transform: none;
+  }
 }

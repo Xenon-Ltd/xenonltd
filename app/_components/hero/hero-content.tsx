@@ -15,7 +15,7 @@ export default function HeroContent() {
             aria-hidden="true"
             className="hero-word-reveal mr-[0.23em] inline-block overflow-hidden last:mr-0"
             key={word}
-            style={{ animationDelay: `${80 + index * 90}ms` }}
+            style={{ animationDelay: `${index * 45}ms` }}
           >
             <span className="inline-block">{word}</span>
           </span>
